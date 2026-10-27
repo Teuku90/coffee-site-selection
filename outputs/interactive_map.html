@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0d0880c7c38b4f22c5e7c2453c29c579 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_0d0880c7c38b4f22c5e7c2453c29c579" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_0d0880c7c38b4f22c5e7c2453c29c579 = L.map(
+                "map_0d0880c7c38b4f22c5e7c2453c29c579",
+                {
+                    center: [-6.208354079418849, 106.80116556704544],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_0d0880c7c38b4f22c5e7c2453c29c579);
+
+            
+
+        
+    
+            var tile_layer_2866ac900b452256c8ec0e244a694265 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_2866ac900b452256c8ec0e244a694265.addTo(map_0d0880c7c38b4f22c5e7c2453c29c579);
+        
+    
+            map_0d0880c7c38b4f22c5e7c2453c29c579.fitBounds(
+                [[-6.259116527629879, 106.74525645189446], [-6.157591631207819, 106.85707468219641]],
+                {}
+            );
+        
+    
+        function geo_json_0f3db7454b051bcc760816d22f2098c8_styler(feature) {
+            switch(feature.id) {
+                case "0": 
+                    return {"color": "#00441b", "fillColor": "#00441b", "fillOpacity": 0.5, "weight": 2};
+                case "1": 
+                    return {"color": "#006b2b", "fillColor": "#006b2b", "fillOpacity": 0.5, "weight": 2};
+                case "2": 
+                    return {"color": "#03702e", "fillColor": "#03702e", "fillOpacity": 0.5, "weight": 2};
+                case "3": 
+                    return {"color": "#097532", "fillColor": "#097532", "fillOpacity": 0.5, "weight": 2};
+                case "4": 
+                    return {"color": "#0a7633", "fillColor": "#0a7633", "fillOpacity": 0.5, "weight": 2};
+                case "5": 
+                    return {"color": "#0c7735", "fillColor": "#0c7735", "fillOpacity": 0.5, "weight": 2};
+                case "6": 
+                    return {"color": "#107a37", "fillColor": "#107a37", "fillOpacity": 0.5, "weight": 2};
+                case "7": 
+                    return {"color": "#157f3b", "fillColor": "#157f3b", "fillOpacity": 0.5, "weight": 2};
+                case "11": 
+                    return {"color": "#19833e", "fillColor": "#19833e", "fillOpacity": 0.5, "weight": 2};
+                case "12": case "13": 
+                    return {"color": "#1e8741", "fillColor": "#1e8741", "fillOpacity": 0.5, "weight": 2};
+                case "14": case "15": 
+                    return {"color": "#1f8742", "fillColor": "#1f8742", "fillOpacity": 0.5, "weight": 2};
+                case "16": 
+                    return {"color": "#218944", "fillColor": "#218944", "fillOpacity": 0.5, "weight": 2};
+                case "17": case "18": case "19": 
+                    return {"color": "#228a44", "fillColor": "#228a44", "fillOpacity": 0.5, "weight": 2};
+                case "20": 
+                    return {"color": "#238b45", "fillColor": "#238b45", "fillOpacity": 0.5, "weight": 2};
+                case "21": 
+                    return {"color": "#2b934b", "fillColor": "#2b934b", "fillOpacity": 0.5, "weight": 2};
+                case "22": 
+                    return {"color": "#2c944c", "fillColor": "#2c944c", "fillOpacity": 0.5, "weight": 2};
+                case "23": 
+                    return {"color": "#309950", "fillColor": "#309950", "fillOpacity": 0.5, "weight": 2};
+                case "24": 
+                    return {"color": "#369f54", "fillColor": "#369f54", "fillOpacity": 0.5, "weight": 2};
+                case "25": 
+                    return {"color": "#38a156", "fillColor": "#38a156", "fillOpacity": 0.5, "weight": 2};
+                case "26": 
+                    return {"color": "#3ea75a", "fillColor": "#3ea75a", "fillOpacity": 0.5, "weight": 2};
+                case "27": 
+                    return {"color": "#4db163", "fillColor": "#4db163", "fillOpacity": 0.5, "weight": 2};
+                case "28": 
+                    return {"color": "#50b264", "fillColor": "#50b264", "fillOpacity": 0.5, "weight": 2};
+                case "29": 
+                    return {"color": "#62bb6d", "fillColor": "#62bb6d", "fillOpacity": 0.5, "weight": 2};
+                case "30": 
+                    return {"color": "#68be70", "fillColor": "#68be70", "fillOpacity": 0.5, "weight": 2};
+                case "31": 
+                    return {"color": "#6dc072", "fillColor": "#6dc072", "fillOpacity": 0.5, "weight": 2};
+                case "32": 
+                    return {"color": "#78c679", "fillColor": "#78c679", "fillOpacity": 0.5, "weight": 2};
+                case "33": 
+                    return {"color": "#83cb82", "fillColor": "#83cb82", "fillOpacity": 0.5, "weight": 2};
+                case "34": 
+                    return {"color": "#8dd08a", "fillColor": "#8dd08a", "fillOpacity": 0.5, "weight": 2};
+                case "35": 
+                    return {"color": "#9cd797", "fillColor": "#9cd797", "fillOpacity": 0.5, "weight": 2};
+                case "36": 
+                    return {"color": "#c1e6ba", "fillColor": "#c1e6ba", "fillOpacity": 0.5, "weight": 2};
+                case "37": 
+                    return {"color": "#d3eecd", "fillColor": "#d3eecd", "fillOpacity": 0.5, "weight": 2};
+                case "38": 
+                    return {"color": "#f1faee", "fillColor": "#f1faee", "fillOpacity": 0.5, "weight": 2};
+                case "39": 
+                    return {"color": "#f7fcf5", "fillColor": "#f7fcf5", "fillOpacity": 0.5, "weight": 2};
+                default:
+                    return {"color": "#18823d", "fillColor": "#18823d", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+        function geo_json_0f3db7454b051bcc760816d22f2098c8_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0.75};
+            }
+        }
+        function geo_json_0f3db7454b051bcc760816d22f2098c8_pointToLayer(feature, latlng) {
+            var opts = {
+  "stroke": true,
+  "color": "#3388ff",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "#3388ff",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 7,
+};
+            
+            let style = geo_json_0f3db7454b051bcc760816d22f2098c8_styler(feature)
+            Object.assign(opts, style)
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_0f3db7454b051bcc760816d22f2098c8_onEachFeature(feature, layer) {
+
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                            geo_json_0f3db7454b051bcc760816d22f2098c8.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_0f3db7454b051bcc760816d22f2098c8_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_0f3db7454b051bcc760816d22f2098c8 = L.geoJson(null, {
+                onEachFeature: geo_json_0f3db7454b051bcc760816d22f2098c8_onEachFeature,
+            
+                style: geo_json_0f3db7454b051bcc760816d22f2098c8_styler,
+                pointToLayer: geo_json_0f3db7454b051bcc760816d22f2098c8_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_0f3db7454b051bcc760816d22f2098c8_add (data) {
+            geo_json_0f3db7454b051bcc760816d22f2098c8
+                .addData(data);
+        }
+            geo_json_0f3db7454b051bcc760816d22f2098c8_add({"bbox": [106.74525645189446, -6.259116527629879, 106.85707468219641, -6.157591631207819], "features": [{"bbox": [106.78449576290791, -6.236011015702987, 106.78449576290791, -6.236011015702987], "geometry": {"coordinates": [106.78449576290791, -6.236011015702987], "type": "Point"}, "id": "0", "properties": {"__folium_color": "#00441b", "competition_pressure": 0.037, "competition_score": 0.993, "final_score": 0.775, "foot_traffic_index": 0.3828149083954274, "id": "site_010", "n_competitors": 0, "name": "Ruko Jl. Kandidat No. 11", "nearest_competitor_m": 963.0, "rank": 1, "traffic_score": 0.449}, "type": "Feature"}, {"bbox": [106.78254311617557, -6.203468455262824, 106.78254311617557, -6.203468455262824], "geometry": {"coordinates": [106.78254311617557, -6.203468455262824], "type": "Point"}, "id": "1", "properties": {"__folium_color": "#006b2b", "competition_pressure": 0.074, "competition_score": 0.987, "final_score": 0.703, "foot_traffic_index": 0.2722721683672314, "id": "site_021", "n_competitors": 0, "name": "Ruko Jl. Kandidat No. 22", "nearest_competitor_m": 926.0, "rank": 2, "traffic_score": 0.276}, "type": "Feature"}, {"bbox": [106.84303175038936, -6.17596818775973, 106.84303175038936, -6.17596818775973], "geometry": {"coordinates": [106.84303175038936, -6.17596818775973], "type": "Point"}, "id": "2", "properties": {"__folium_color": "#03702e", "competition_pressure": 0.348, "competition_score": 0.937, "final_score": 0.693, "foot_traffic_index": 0.3039152403937935, "id": "site_002", "n_competitors": 0, "name": "Ruko Jl. Kandidat No. 3", "nearest_competitor_m": 806.0, "rank": 3, "traffic_score": 0.326}, "type": "Feature"}, {"bbox": [106.79600652044724, -6.19289514071055, 106.79600652044724, -6.19289514071055], "geometry": {"coordinates": [106.79600652044724, -6.19289514071055], "type": "Point"}, "id": "3", "properties": {"__folium_color": "#097532", "competition_pressure": 0.18, "competition_score": 0.967, "final_score": 0.681, "foot_traffic_index": 0.2561529415069402, "id": "site_026", "n_competitors": 0, "name": "Ruko Jl. Kandidat No. 27", "nearest_competitor_m": 820.0, "rank": 4, "traffic_score": 0.251}, "type": "Feature"}, {"bbox": [106.85707468219641, -6.163428277100383, 106.85707468219641, -6.163428277100383], "geometry": {"coordinates": [106.85707468219641, -6.163428277100383], "type": "Point"}, "id": "4", "properties": {"__folium_color": "#0a7633", "competition_pressure": 0.0, "competition_score": 1.0, "final_score": 0.679, "foot_traffic_index": 0.22180630775597837, "id": "site_005", "n_competitors": 0, "name": "Ruko Jl. Kandidat No. 6", "nearest_competitor_m": 1000.0, "rank": 5, "traffic_score": 0.197}, "type": "Feature"}, {"bbox": [106.78445516472418, -6.231927261696159, 106.78445516472418, -6.231927261696159], "geometry": {"coordinates": [106.78445516472418, -6.231927261696159], "type": "Point"}, "id": "5", "properties": {"__folium_color": "#0c7735", "competition_pressure": 0.782, "competition_score": 0.858, "final_score": 0.674, "foot_traffic_index": 0.34938357980002577, "id": "site_033", "n_competitors": 0, "name": "Ruko Jl. Kandidat No. 34", "nearest_competitor_m": 728.0, "rank": 6, "traffic_score": 0.397}, "type": "Feature"}, {"bbox": [106.81726381440967, -6.165569074699743, 106.81726381440967, -6.165569074699743], "geometry": {"coordinates": [106.81726381440967, -6.165569074699743], "type": "Point"}, "id": "6", "properties": {"__folium_color": "#107a37", "competition_pressure": 0.297, "competition_score": 0.946, "final_score": 0.666, "foot_traffic_index": 0.2530525644023718, "id": "site_012", "n_competitors": 0, "name": "Ruko Jl. Kandidat No. 13", "nearest_competitor_m": 824.0, "rank": 7, "traffic_score": 0.246}, "type": "Feature"}, {"bbox": [106.76273656309012, -6.22623393295736, 106.76273656309012, -6.22623393295736], "geometry": {"coordinates": [106.76273656309012, -6.22623393295736], "type": "Point"}, "id": "7", "properties": {"__folium_color": "#157f3b", "competition_pressure": 0.0, "competition_score": 1.0, "final_score": 0.656, "foot_traffic_index": 0.18540084898019238, "id": "site_035", "n_competitors": 0, "name": "Ruko Jl. Kandidat No. 36", "nearest_competitor_m": 1000.0, "rank": 8, "traffic_score": 0.14}, "type": "Feature"}, {"bbox": [106.8561011678921, -6.210976562753044, 106.8561011678921, -6.210976562753044], "geometry": {"coordinates": [106.8561011678921, -6.210976562753044], "type": "Point"}, "id": "8", "properties": {"__folium_color": "#18823d", "competition_pressure": 0.4, "competition_score": 0.927, "final_score": 0.649, "foot_traffic_index": 0.2436042517583778, "id": "site_031", "n_competitors": 0, "name": "Ruko Jl. Kandidat No. 32", "nearest_competitor_m": 600.0, "rank": 9, "traffic_score": 0.231}, "type": "Feature"}, {"bbox": [106.85121179866184, -6.259116527629879, 106.85121179866184, -6.259116527629879], "geometry": {"coordinates": [106.85121179866184, -6.259116527629879], "type": "Point"}, "id": "9", "properties": {"__folium_color": "#18823d", "competition_pressure": 0.181, "competition_score": 0.967, "final_score": 0.649, "foot_traffic_index": 0.20613577659738574, "id": "site_011", "n_competitors": 0, "name": "Ruko Jl. Kandidat No. 12", "nearest_competitor_m": 819.0, "rank": 10, "traffic_score": 0.173}, "type": "Feature"}, {"bbox": [106.7672291218861, -6.193156141719046, 106.7672291218861, -6.193156141719046], "geometry": {"coordinates": [106.7672291218861, -6.193156141719046], "type": "Point"}, "id": "10", "properties": {"__folium_color": "#18823d", "competition_pressure": 0.0, "competition_score": 1.0, "final_score": 0.648, "foot_traffic_index": 0.1720571315558431, "id": "site_038", "n_competitors": 0, "name": "Ruko Jl. Kandidat No. 39", "nearest_competitor_m": 1000.0, "rank": 11, "traffic_score": 0.119}, "type": "Feature"}, {"bbox": [106.83931574063911, -6.243224360224681, 106.83931574063911, -6.243224360224681], "geometry": {"coordinates": [106.83931574063911, -6.243224360224681], "type": "Point"}, "id": "11", "properties": {"__folium_color": "#19833e", "competition_pressure": 0.843, "competition_score": 0.847, "final_score": 0.646, "foot_traffic_index": 0.3165453331263014, "id": "site_018", "n_competitors": 0, "name": "Ruko Jl. Kandidat No. 19", "nearest_competitor_m": 553.0, "rank": 12, "traffic_score": 0.345}, "type": "Feature"}, {"bbox": [106.8203776793619, -6.16593221490723, 106.8203776793619, -6.16593221490723], "geometry": {"coordinates": [106.8203776793619, -6.16593221490723], "type": "Point"}, "id": "12", "properties": {"__folium_color": "#1e8741", "competition_pressure": 0.295, "competition_score": 0.946, "final_score": 0.636, "foot_traffic_index": 0.20559523919662395, "id": "site_039", "n_competitors": 0, "name": "Ruko Jl. Kandidat No. 40", "nearest_competitor_m": 705.0, "rank": 13, "traffic_score": 0.172}, "type": "Feature"}, {"bbox": [106.76335664494223, -6.19357047192104, 106.76335664494223, -6.19357047192104], "geometry": {"coordinates": [106.76335664494223, -6.19357047192104], "type": "Point"}, "id": "13", "properties": {"__folium_color": "#1e8741", "competition_pressure": 0.0, "competition_score": 1.0, "final_score": 0.636, "foot_traffic_index": 0.15391808348286942, "id": "site_025", "n_competitors": 0, "name": "Ruko Jl. Kandidat No. 26", "nearest_competitor_m": 1000.0, "rank": 14, "traffic_score": 0.091}, "type": "Feature"}, {"bbox": [106.75559058064024, -6.224768749067998, 106.75559058064024, -6.224768749067998], "geometry": {"coordinates": [106.75559058064024, -6.224768749067998], "type": "Point"}, "id": "14", "properties": {"__folium_color": "#1f8742", "competition_pressure": 0.305, "competition_score": 0.944, "final_score": 0.634, "foot_traffic_index": 0.20280289215653374, "id": "site_036", "n_competitors": 0, "name": "Ruko Jl. Kandidat No. 37", "nearest_competitor_m": 695.0, "rank": 15, "traffic_score": 0.168}, "type": "Feature"}, {"bbox": [106.7476580707325, -6.191751056485653, 106.7476580707325, -6.191751056485653], "geometry": {"coordinates": [106.7476580707325, -6.191751056485653], "type": "Point"}, "id": "15", "properties": {"__folium_color": "#1f8742", "competition_pressure": 0.0, "competition_score": 1.0, "final_score": 0.634, "foot_traffic_index": 0.14981711429728464, "id": "site_017", "n_competitors": 0, "name": "Ruko Jl. Kandidat No. 18", "nearest_competitor_m": 1000.0, "rank": 16, "traffic_score": 0.085}, "type": "Feature"}, {"bbox": [106.79266541277025, -6.16007861647306, 106.79266541277025, -6.16007861647306], "geometry": {"coordinates": [106.79266541277025, -6.16007861647306], "type": "Point"}, "id": "16", "properties": {"__folium_color": "#218944", "competition_pressure": 0.0, "competition_score": 1.0, "final_score": 0.63, "foot_traffic_index": 0.14320614970013043, "id": "site_001", "n_competitors": 0, "name": "Ruko Jl. Kandidat No. 2", "nearest_competitor_m": 1000.0, "rank": 17, "traffic_score": 0.074}, "type": "Feature"}, {"bbox": [106.77909904297657, -6.157591631207819, 106.77909904297657, -6.157591631207819], "geometry": {"coordinates": [106.77909904297657, -6.157591631207819], "type": "Point"}, "id": "17", "properties": {"__folium_color": "#228a44", "competition_pressure": 0.0, "competition_score": 1.0, "final_score": 0.628, "foot_traffic_index": 0.1404694617728015, "id": "site_032", "n_competitors": 0, "name": "Ruko Jl. Kandidat No. 33", "nearest_competitor_m": 1000.0, "rank": 18, "traffic_score": 0.07}, "type": "Feature"}, {"bbox": [106.79320970385928, -6.17538015456484, 106.79320970385928, -6.17538015456484], "geometry": {"coordinates": [106.79320970385928, -6.17538015456484], "type": "Point"}, "id": "18", "properties": {"__folium_color": "#228a44", "competition_pressure": 0.29, "competition_score": 0.947, "final_score": 0.628, "foot_traffic_index": 0.19112376819516316, "id": "site_014", "n_competitors": 0, "name": "Ruko Jl. Kandidat No. 15", "nearest_competitor_m": 710.0, "rank": 19, "traffic_score": 0.149}, "type": "Feature"}, {"bbox": [106.74525645189446, -6.223525988232486, 106.74525645189446, -6.223525988232486], "geometry": {"coordinates": [106.74525645189446, -6.223525988232486], "type": "Point"}, "id": "19", "properties": {"__folium_color": "#228a44", "competition_pressure": 0.0, "competition_score": 1.0, "final_score": 0.628, "foot_traffic_index": 0.13956475953711414, "id": "site_027", "n_competitors": 0, "name": "Ruko Jl. Kandidat No. 28", "nearest_competitor_m": 1000.0, "rank": 20, "traffic_score": 0.069}, "type": "Feature"}, {"bbox": [106.75537363592106, -6.178100539523003, 106.75537363592106, -6.178100539523003], "geometry": {"coordinates": [106.75537363592106, -6.178100539523003], "type": "Point"}, "id": "20", "properties": {"__folium_color": "#238b45", "competition_pressure": 0.0, "competition_score": 1.0, "final_score": 0.625, "foot_traffic_index": 0.13579606649010814, "id": "site_008", "n_competitors": 0, "name": "Ruko Jl. Kandidat No. 9", "nearest_competitor_m": 1000.0, "rank": 21, "traffic_score": 0.063}, "type": "Feature"}, {"bbox": [106.76726864661417, -6.166312516277364, 106.76726864661417, -6.166312516277364], "geometry": {"coordinates": [106.76726864661417, -6.166312516277364], "type": "Point"}, "id": "21", "properties": {"__folium_color": "#2b934b", "competition_pressure": 0.0, "competition_score": 1.0, "final_score": 0.607, "foot_traffic_index": 0.107082784735764, "id": "site_015", "n_competitors": 0, "name": "Ruko Jl. Kandidat No. 16", "nearest_competitor_m": 1000.0, "rank": 22, "traffic_score": 0.018}, "type": "Feature"}, {"bbox": [106.8387313935925, -6.180217897208956, 106.8387313935925, -6.180217897208956], "geometry": {"coordinates": [106.8387313935925, -6.180217897208956], "type": "Point"}, "id": "22", "properties": {"__folium_color": "#2c944c", "competition_pressure": 1.862, "competition_score": 0.661, "final_score": 0.603, "foot_traffic_index": 0.42605441256081034, "id": "site_013", "n_competitors": 2, "name": "Ruko Jl. Kandidat No. 14", "nearest_competitor_m": 163.0, "rank": 23, "traffic_score": 0.517}, "type": "Feature"}, {"bbox": [106.8065501744419, -6.204930106935399, 106.8065501744419, -6.204930106935399], "geometry": {"coordinates": [106.8065501744419, -6.204930106935399], "type": "Point"}, "id": "23", "properties": {"__folium_color": "#309950", "competition_pressure": 1.587, "competition_score": 0.711, "final_score": 0.592, "foot_traffic_index": 0.3604437201605037, "id": "site_016", "n_competitors": 0, "name": "Ruko Jl. Kandidat No. 17", "nearest_competitor_m": 441.0, "rank": 24, "traffic_score": 0.414}, "type": "Feature"}, {"bbox": [106.84717453455866, -6.168200137110077, 106.84717453455866, -6.168200137110077], "geometry": {"coordinates": [106.84717453455866, -6.168200137110077], "type": "Point"}, "id": "24", "properties": {"__folium_color": "#369f54", "competition_pressure": 1.076, "competition_score": 0.804, "final_score": 0.578, "foot_traffic_index": 0.24871730187783972, "id": "site_023", "n_competitors": 1, "name": "Ruko Jl. Kandidat No. 24", "nearest_competitor_m": 172.0, "rank": 25, "traffic_score": 0.239}, "type": "Feature"}, {"bbox": [106.7513012817465, -6.160128823832576, 106.7513012817465, -6.160128823832576], "geometry": {"coordinates": [106.7513012817465, -6.160128823832576], "type": "Point"}, "id": "25", "properties": {"__folium_color": "#38a156", "competition_pressure": 0.237, "competition_score": 0.957, "final_score": 0.574, "foot_traffic_index": 0.09569004652930983, "id": "site_004", "n_competitors": 0, "name": "Ruko Jl. Kandidat No. 5", "nearest_competitor_m": 763.0, "rank": 26, "traffic_score": 0.0}, "type": "Feature"}, {"bbox": [106.7585147390481, -6.256301859851847, 106.7585147390481, -6.256301859851847], "geometry": {"coordinates": [106.7585147390481, -6.256301859851847], "type": "Point"}, "id": "26", "properties": {"__folium_color": "#3ea75a", "competition_pressure": 0.795, "competition_score": 0.855, "final_score": 0.559, "foot_traffic_index": 0.1689806761011111, "id": "site_028", "n_competitors": 0, "name": "Ruko Jl. Kandidat No. 29", "nearest_competitor_m": 567.0, "rank": 27, "traffic_score": 0.115}, "type": "Feature"}, {"bbox": [106.82937145870893, -6.234249839261656, 106.82937145870893, -6.234249839261656], "geometry": {"coordinates": [106.82937145870893, -6.234249839261656], "type": "Point"}, "id": "27", "properties": {"__folium_color": "#4db163", "competition_pressure": 2.706, "competition_score": 0.507, "final_score": 0.533, "foot_traffic_index": 0.4623042172946267, "id": "site_030", "n_competitors": 1, "name": "Ruko Jl. Kandidat No. 31", "nearest_competitor_m": 213.0, "rank": 28, "traffic_score": 0.573}, "type": "Feature"}, {"bbox": [106.79708459114711, -6.180570018232772, 106.79708459114711, -6.180570018232772], "geometry": {"coordinates": [106.79708459114711, -6.180570018232772], "type": "Point"}, "id": "28", "properties": {"__folium_color": "#50b264", "competition_pressure": 1.29, "competition_score": 0.765, "final_score": 0.53, "foot_traffic_index": 0.20873501672270073, "id": "site_037", "n_competitors": 0, "name": "Ruko Jl. Kandidat No. 38", "nearest_competitor_m": 554.0, "rank": 29, "traffic_score": 0.177}, "type": "Feature"}, {"bbox": [106.79634669735309, -6.253003670997312, 106.79634669735309, -6.253003670997312], "geometry": {"coordinates": [106.79634669735309, -6.253003670997312], "type": "Point"}, "id": "29", "properties": {"__folium_color": "#62bb6d", "competition_pressure": 2.182, "competition_score": 0.603, "final_score": 0.504, "foot_traffic_index": 0.3230049754899452, "id": "site_034", "n_competitors": 2, "name": "Ruko Jl. Kandidat No. 35", "nearest_competitor_m": 373.0, "rank": 30, "traffic_score": 0.356}, "type": "Feature"}, {"bbox": [106.83097052881024, -6.179791644585143, 106.83097052881024, -6.179791644585143], "geometry": {"coordinates": [106.83097052881024, -6.179791644585143], "type": "Point"}, "id": "30", "properties": {"__folium_color": "#68be70", "competition_pressure": 2.379, "competition_score": 0.567, "final_score": 0.494, "foot_traffic_index": 0.34136304182340554, "id": "site_020", "n_competitors": 1, "name": "Ruko Jl. Kandidat No. 21", "nearest_competitor_m": 376.0, "rank": 31, "traffic_score": 0.384}, "type": "Feature"}, {"bbox": [106.79404631254747, -6.243229701966882, 106.79404631254747, -6.243229701966882], "geometry": {"coordinates": [106.79404631254747, -6.243229701966882], "type": "Point"}, "id": "31", "properties": {"__folium_color": "#6dc072", "competition_pressure": 2.586, "competition_score": 0.529, "final_score": 0.488, "foot_traffic_index": 0.36865621529827924, "id": "site_009", "n_competitors": 2, "name": "Ruko Jl. Kandidat No. 10", "nearest_competitor_m": 169.0, "rank": 32, "traffic_score": 0.427}, "type": "Feature"}, {"bbox": [106.85648376292738, -6.192171667222257, 106.85648376292738, -6.192171667222257], "geometry": {"coordinates": [106.85648376292738, -6.192171667222257], "type": "Point"}, "id": "32", "properties": {"__folium_color": "#78c679", "competition_pressure": 2.176, "competition_score": 0.604, "final_score": 0.47, "foot_traffic_index": 0.26706577261489906, "id": "site_022", "n_competitors": 1, "name": "Ruko Jl. Kandidat No. 23", "nearest_competitor_m": 371.0, "rank": 33, "traffic_score": 0.268}, "type": "Feature"}, {"bbox": [106.83340601964885, -6.183833801599929, 106.83340601964885, -6.183833801599929], "geometry": {"coordinates": [106.83340601964885, -6.183833801599929], "type": "Point"}, "id": "33", "properties": {"__folium_color": "#83cb82", "competition_pressure": 3.148, "competition_score": 0.427, "final_score": 0.453, "foot_traffic_index": 0.4107298674730547, "id": "site_024", "n_competitors": 1, "name": "Ruko Jl. Kandidat No. 25", "nearest_competitor_m": 268.0, "rank": 34, "traffic_score": 0.493}, "type": "Feature"}, {"bbox": [106.82368416348712, -6.222516003034155, 106.82368416348712, -6.222516003034155], "geometry": {"coordinates": [106.82368416348712, -6.222516003034155], "type": "Point"}, "id": "34", "properties": {"__folium_color": "#8dd08a", "competition_pressure": 5.164, "competition_score": 0.06, "final_score": 0.436, "foot_traffic_index": 0.7350657256312559, "id": "site_003", "n_competitors": 3, "name": "Ruko Jl. Kandidat No. 4", "nearest_competitor_m": 116.0, "rank": 35, "traffic_score": 1.0}, "type": "Feature"}, {"bbox": [106.83287472582671, -6.20754176973532, 106.83287472582671, -6.20754176973532], "geometry": {"coordinates": [106.83287472582671, -6.20754176973532], "type": "Point"}, "id": "35", "properties": {"__folium_color": "#9cd797", "competition_pressure": 3.53, "competition_score": 0.357, "final_score": 0.411, "foot_traffic_index": 0.41060813941695595, "id": "site_000", "n_competitors": 1, "name": "Ruko Jl. Kandidat No. 1", "nearest_competitor_m": 393.0, "rank": 36, "traffic_score": 0.493}, "type": "Feature"}, {"bbox": [106.83432771663324, -6.22540062752837, 106.83432771663324, -6.22540062752837], "geometry": {"coordinates": [106.83432771663324, -6.22540062752837], "type": "Point"}, "id": "36", "properties": {"__folium_color": "#c1e6ba", "competition_pressure": 5.333, "competition_score": 0.029, "final_score": 0.341, "foot_traffic_index": 0.6134527992960087, "id": "site_007", "n_competitors": 2, "name": "Ruko Jl. Kandidat No. 8", "nearest_competitor_m": 277.0, "rank": 37, "traffic_score": 0.81}, "type": "Feature"}, {"bbox": [106.83133676423884, -6.213502594516378, 106.83133676423884, -6.213502594516378], "geometry": {"coordinates": [106.83133676423884, -6.213502594516378], "type": "Point"}, "id": "37", "properties": {"__folium_color": "#d3eecd", "competition_pressure": 4.688, "competition_score": 0.146, "final_score": 0.299, "foot_traffic_index": 0.433120619016135, "id": "site_006", "n_competitors": 1, "name": "Ruko Jl. Kandidat No. 7", "nearest_competitor_m": 164.0, "rank": 38, "traffic_score": 0.528}, "type": "Feature"}, {"bbox": [106.8219658743891, -6.207593913292116, 106.8219658743891, -6.207593913292116], "geometry": {"coordinates": [106.8219658743891, -6.207593913292116], "type": "Point"}, "id": "38", "properties": {"__folium_color": "#f1faee", "competition_pressure": 5.405, "competition_score": 0.016, "final_score": 0.203, "foot_traffic_index": 0.4044168905119419, "id": "site_029", "n_competitors": 2, "name": "Ruko Jl. Kandidat No. 30", "nearest_competitor_m": 113.0, "rank": 39, "traffic_score": 0.483}, "type": "Feature"}, {"bbox": [106.81579972789464, -6.246256391175683, 106.81579972789464, -6.246256391175683], "geometry": {"coordinates": [106.81579972789464, -6.246256391175683], "type": "Point"}, "id": "39", "properties": {"__folium_color": "#f7fcf5", "competition_pressure": 5.492, "competition_score": 0.0, "final_score": 0.178, "foot_traffic_index": 0.3810196101056347, "id": "site_019", "n_competitors": 2, "name": "Ruko Jl. Kandidat No. 20", "nearest_competitor_m": 261.0, "rank": 40, "traffic_score": 0.446}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_0f3db7454b051bcc760816d22f2098c8.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["rank", "name", "n_competitors", "final_score"];
+    let aliases = ["rank", "name", "n_competitors", "final_score"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_0f3db7454b051bcc760816d22f2098c8.addTo(map_0d0880c7c38b4f22c5e7c2453c29c579);
+        
+    
+    var color_map_3e86b901f7026328b14ae581763706f3 = {};
+
+    
+    color_map_3e86b901f7026328b14ae581763706f3.color = d3.scale.threshold()
+              .domain([0.178, 0.17919639278557115, 0.18039278557114227, 0.18158917835671343, 0.18278557114228455, 0.1839819639278557, 0.18517835671342683, 0.186374749498998, 0.18757114228456914, 0.18876753507014027, 0.18996392785571142, 0.19116032064128255, 0.1923567134268537, 0.19355310621242483, 0.19474949899799598, 0.19594589178356714, 0.19714228456913827, 0.19833867735470942, 0.19953507014028055, 0.2007314629258517, 0.20192785571142283, 0.20312424849699398, 0.2043206412825651, 0.20551703406813626, 0.20671342685370742, 0.20790981963927854, 0.2091062124248497, 0.21030260521042082, 0.21149899799599198, 0.21269539078156313, 0.21389178356713426, 0.21508817635270538, 0.21628456913827654, 0.2174809619238477, 0.21867735470941882, 0.21987374749498997, 0.2210701402805611, 0.22226653306613225, 0.2234629258517034, 0.22465931863727454, 0.2258557114228457, 0.22705210420841682, 0.22824849699398797, 0.22944488977955912, 0.23064128256513025, 0.23183767535070138, 0.23303406813627253, 0.2342304609218437, 0.2354268537074148, 0.23662324649298597, 0.2378196392785571, 0.23901603206412825, 0.24021242484969937, 0.24140881763527053, 0.24260521042084165, 0.2438016032064128, 0.24499799599198396, 0.2461943887775551, 0.24739078156312624, 0.24858717434869737, 0.24978356713426852, 0.2509799599198397, 0.25217635270541083, 0.25337274549098193, 0.2545691382765531, 0.25576553106212424, 0.2569619238476954, 0.2581583166332665, 0.25935470941883765, 0.2605511022044088, 0.26174749498997996, 0.2629438877755511, 0.2641402805611222, 0.26533667334669336, 0.2665330661322645, 0.26772945891783567, 0.26892585170340677, 0.2701222444889779, 0.2713186372745491, 0.27251503006012023, 0.2737114228456914, 0.27490781563126254, 0.27610420841683364, 0.2773006012024048, 0.27849699398797595, 0.27969338677354705, 0.2808897795591182, 0.28208617234468936, 0.2832825651302605, 0.28447895791583167, 0.2856753507014028, 0.2868717434869739, 0.2880681362725451, 0.2892645290581162, 0.2904609218436873, 0.2916573146292585, 0.29285370741482963, 0.2940501002004008, 0.29524649298597194, 0.2964428857715431, 0.2976392785571142, 0.29883567134268535, 0.3000320641282565, 0.30122845691382766, 0.30242484969939876, 0.3036212424849699, 0.30481763527054107, 0.3060140280561122, 0.3072104208416834, 0.30840681362725453, 0.3096032064128257, 0.3107995991983968, 0.31199599198396794, 0.31319238476953903, 0.3143887775551102, 0.31558517034068134, 0.3167815631262525, 0.31797795591182365, 0.3191743486973948, 0.3203707414829659, 0.32156713426853706, 0.32276352705410816, 0.32395991983967937, 0.32515631262525047, 0.3263527054108216, 0.3275490981963928, 0.32874549098196393, 0.3299418837675351, 0.33113827655310624, 0.33233466933867734, 0.3335310621242485, 0.3347274549098196, 0.33592384769539074, 0.3371202404809619, 0.33831663326653305, 0.3395130260521042, 0.34070941883767536, 0.3419058116232465, 0.3431022044088176, 0.3442985971943887, 0.3454949899799599, 0.346691382765531, 0.3478877755511022, 0.34908416833667333, 0.3502805611222445, 0.35147695390781564, 0.35267334669338674, 0.35386973947895795, 0.35506613226452904, 0.3562625250501002, 0.3574589178356713, 0.35865531062124245, 0.3598517034068136, 0.36104809619238476, 0.3622444889779559, 0.36344088176352707, 0.36463727454909817, 0.3658336673346693, 0.3670300601202404, 0.36822645290581163, 0.36942284569138273, 0.3706192384769539, 0.37181563126252504, 0.3730120240480962, 0.37420841683366735, 0.3754048096192385, 0.3766012024048096, 0.37779759519038075, 0.37899398797595185, 0.380190380761523, 0.38138677354709416, 0.3825831663326653, 0.38377955911823647, 0.3849759519038076, 0.3861723446893788, 0.3873687374749499, 0.38856513026052103, 0.38976152304609213, 0.3909579158316633, 0.39215430861723444, 0.3933507014028056, 0.39454709418837675, 0.3957434869739479, 0.396939879759519, 0.3981362725450902, 0.3993326653306613, 0.40052905811623246, 0.40172545090180356, 0.4029218436873747, 0.40411823647294587, 0.405314629258517, 0.4065110220440882, 0.40770741482965933, 0.40890380761523043, 0.4101002004008016, 0.4112965931863727, 0.4124929859719439, 0.413689378757515, 0.41488577154308615, 0.4160821643286573, 0.41727855711422845, 0.4184749498997996, 0.4196713426853707, 0.42086773547094186, 0.422064128256513, 0.4232605210420841, 0.42445691382765527, 0.4256533066132264, 0.4268496993987976, 0.42804609218436873, 0.42924248496993983, 0.430438877755511, 0.43163527054108214, 0.4328316633266533, 0.43402805611222445, 0.43522444889779555, 0.4364208416833667, 0.43761723446893785, 0.438813627254509, 0.44001002004008016, 0.4412064128256513, 0.4424028056112224, 0.44359919839679357, 0.4447955911823647, 0.4459919839679359, 0.447188376753507, 0.44838476953907813, 0.4495811623246493, 0.4507775551102204, 0.45197394789579154, 0.45317034068136275, 0.45436673346693385, 0.455563126252505, 0.45675951903807616, 0.4579559118236473, 0.4591523046092184, 0.46034869739478956, 0.4615450901803607, 0.4627414829659318, 0.46393787575150297, 0.4651342685370741, 0.4663306613226452, 0.4675270541082164, 0.4687234468937876, 0.46991983967935874, 0.47111623246492984, 0.472312625250501, 0.47350901803607215, 0.47470541082164325, 0.4759018036072144, 0.47709819639278556, 0.47829458917835665, 0.4794909819639278, 0.48068737474949896, 0.4818837675350701, 0.48308016032064127, 0.4842765531062124, 0.4854729458917836, 0.4866693386773547, 0.48786573146292583, 0.489062124248497, 0.49025851703406814, 0.49145490981963924, 0.4926513026052104, 0.49384769539078155, 0.49504408817635265, 0.4962404809619238, 0.49743687374749496, 0.4986332665330661, 0.49982965931863726, 0.5010260521042085, 0.5022224448897796, 0.5034188376753507, 0.5046152304609218, 0.505811623246493, 0.507008016032064, 0.5082044088176352, 0.5094008016032063, 0.5105971943887775, 0.5117935871743486, 0.5129899799599198, 0.514186372745491, 0.5153827655310621, 0.5165791583166333, 0.5177755511022044, 0.5189719438877756, 0.5201683366733467, 0.5213647294589179, 0.5225611222444889, 0.5237575150300601, 0.5249539078156312, 0.5261503006012024, 0.5273466933867734, 0.5285430861723447, 0.5297394789579158, 0.5309358717434869, 0.532132264529058, 0.5333286573146292, 0.5345250501002003, 0.5357214428857715, 0.5369178356713427, 0.5381142284569138, 0.539310621242485, 0.5405070140280561, 0.5417034068136273, 0.5428997995991984, 0.5440961923847696, 0.5452925851703407, 0.5464889779559119, 0.5476853707414829, 0.5488817635270541, 0.5500781563126252, 0.5512745490981963, 0.5524709418837674, 0.5536673346693386, 0.5548637274549097, 0.5560601202404809, 0.5572565130260521, 0.5584529058116232, 0.5596492985971944, 0.5608456913827655, 0.5620420841683367, 0.5632384769539078, 0.564434869739479, 0.5656312625250501, 0.5668276553106213, 0.5680240480961923, 0.5692204408817635, 0.5704168336673346, 0.5716132264529057, 0.572809619238477, 0.5740060120240481, 0.5752024048096191, 0.5763987975951903, 0.5775951903807615, 0.5787915831663326, 0.5799879759519038, 0.5811843687374749, 0.5823807615230461, 0.5835771543086172, 0.5847735470941884, 0.5859699398797595, 0.5871663326653306, 0.5883627254509018, 0.589559118236473, 0.5907555110220442, 0.5919519038076152, 0.5931482965931864, 0.5943446893787575, 0.5955410821643286, 0.5967374749498997, 0.5979338677354709, 0.599130260521042, 0.6003266533066132, 0.6015230460921843, 0.6027194388777555, 0.6039158316633266, 0.6051122244488978, 0.6063086172344689, 0.6075050100200401, 0.6087014028056112, 0.6098977955911824, 0.6110941883767536, 0.6122905811623246, 0.6134869739478958, 0.6146833667334669, 0.615879759519038, 0.6170761523046092, 0.6182725450901804, 0.6194689378757514, 0.6206653306613226, 0.6218617234468937, 0.6230581162324649, 0.624254509018036, 0.6254509018036072, 0.6266472945891783, 0.6278436873747495, 0.6290400801603206, 0.6302364729458918, 0.6314328657314628, 0.6326292585170341, 0.6338256513026053, 0.6350220440881764, 0.6362184368737475, 0.6374148296593186, 0.6386112224448898, 0.6398076152304608, 0.641004008016032, 0.6422004008016031, 0.6433967935871743, 0.6445931863727454, 0.6457895791583166, 0.6469859719438877, 0.6481823647294589, 0.64937875751503, 0.6505751503006012, 0.6517715430861724, 0.6529679358717435, 0.6541643286573147, 0.6553607214428858, 0.6565571142284569, 0.657753507014028, 0.6589498997995992, 0.6601462925851702, 0.6613426853707414, 0.6625390781563126, 0.6637354709418837, 0.6649318637274548, 0.666128256513026, 0.6673246492985971, 0.6685210420841683, 0.6697174348697394, 0.6709138276553106, 0.6721102204408818, 0.6733066132264529, 0.6745030060120241, 0.6756993987975951, 0.6768957915831664, 0.6780921843687375, 0.6792885771543087, 0.6804849699398796, 0.6816813627254508, 0.6828777555110219, 0.6840741482965931, 0.6852705410821642, 0.6864669338677354, 0.6876633266533065, 0.6888597194388777, 0.6900561122244488, 0.69125250501002, 0.6924488977955912, 0.6936452905811623, 0.6948416833667335, 0.6960380761523046, 0.6972344689378758, 0.6984308617234469, 0.6996272545090181, 0.7008236472945892, 0.7020200400801604, 0.7032164328657313, 0.7044128256513027, 0.7056092184368736, 0.7068056112224448, 0.7080020040080159, 0.7091983967935871, 0.7103947895791582, 0.7115911823647294, 0.7127875751503006, 0.7139839679358717, 0.7151803607214429, 0.716376753507014, 0.7175731462925852, 0.7187695390781563, 0.7199659318637275, 0.7211623246492986, 0.7223587174348698, 0.7235551102204407, 0.7247515030060121, 0.725947895791583, 0.7271442885771542, 0.7283406813627256, 0.7295370741482965, 0.7307334669338676, 0.7319298597194388, 0.73312625250501, 0.7343226452905811, 0.7355190380761523, 0.7367154308617234, 0.7379118236472946, 0.7391082164328657, 0.7403046092184369, 0.741501002004008, 0.7426973947895792, 0.7438937875751503, 0.7450901803607215, 0.7462865731462927, 0.7474829659318636, 0.748679358717435, 0.7498757515030059, 0.751072144288577, 0.7522685370741482, 0.7534649298597194, 0.7546613226452905, 0.7558577154308617, 0.7570541082164328, 0.758250501002004, 0.7594468937875751, 0.7606432865731463, 0.7618396793587174, 0.7630360721442886, 0.7642324649298597, 0.7654288577154309, 0.766625250501002, 0.767821643286573, 0.7690180360721444, 0.7702144288577153, 0.7714108216432864, 0.7726072144288576, 0.7738036072144288, 0.7749999999999999])
+              .range(['#f7fcf5ff', '#f7fcf5ff', '#f6fcf4ff', '#f6fcf4ff', '#f6fcf4ff', '#f6fcf4ff', '#f5fbf3ff', '#f5fbf3ff', '#f5fbf2ff', '#f5fbf2ff', '#f4fbf2ff', '#f4fbf2ff', '#f4fbf1ff', '#f4fbf1ff', '#f3faf0ff', '#f3faf0ff', '#f2faf0ff', '#f2faf0ff', '#f2faefff', '#f2faefff', '#f1faeeff', '#f1faeeff', '#f1faeeff', '#f1faeeff', '#f0f9edff', '#f0f9edff', '#f0f9ecff', '#f0f9ecff', '#eff9ecff', '#eff9ecff', '#eff9ebff', '#eff9ebff', '#eef8eaff', '#eef8eaff', '#edf8eaff', '#edf8eaff', '#edf8e9ff', '#edf8e9ff', '#ecf8e8ff', '#ecf8e8ff', '#ecf8e8ff', '#ebf8e7ff', '#ebf7e7ff', '#ebf7e7ff', '#ebf7e7ff', '#eaf7e6ff', '#eaf7e6ff', '#e9f7e5ff', '#e9f7e5ff', '#e9f7e5ff', '#e9f7e5ff', '#e8f6e4ff', '#e8f6e4ff', '#e8f6e3ff', '#e8f6e3ff', '#e7f6e3ff', '#e7f6e3ff', '#e7f6e2ff', '#e7f6e2ff', '#e6f5e1ff', '#e6f5e1ff', '#e5f5e1ff', '#e5f5e1ff', '#e5f5e0ff', '#e5f5e0ff', '#e4f5dfff', '#e4f5dfff', '#e3f4deff', '#e3f4deff', '#e2f4ddff', '#e2f4ddff', '#e1f3dcff', '#e1f3dcff', '#e0f3dbff', '#e0f3dbff', '#dff3daff', '#dff3daff', '#def2d9ff', '#def2d8ff', '#ddf2d8ff', '#dcf2d7ff', '#dcf2d7ff', '#dbf2d6ff', '#dbf1d6ff', '#dbf1d5ff', '#dbf1d5ff', '#daf0d4ff', '#daf0d4ff', '#d9f0d3ff', '#d9f0d3ff', '#d8f0d2ff', '#d8f0d2ff', '#d7efd1ff', '#d7efd1ff', '#d6efd0ff', '#d6efd0ff', '#d5efcfff', '#d5efcfff', '#d4eeceff', '#d4eeceff', '#d3eecdff', '#d3eecdff', '#d2edccff', '#d2edccff', '#d1edcbff', '#d1edcbff', '#d0edcaff', '#d0edcaff', '#cfecc9ff', '#cfecc9ff', '#ceecc8ff', '#ceecc8ff', '#cdecc7ff', '#cdecc7ff', '#ccebc6ff', '#ccebc6ff', '#cbebc5ff', '#cbebc4ff', '#cbeac4ff', '#caeac3ff', '#caeac3ff', '#c9eac2ff', '#c9eac2ff', '#c8eac1ff', '#c8e9c1ff', '#c7e9c0ff', '#c7e9c0ff', '#c6e9bfff', '#c5e8beff', '#c4e8bdff', '#c4e8bdff', '#c3e7bcff', '#c3e7bcff', '#c2e7bbff', '#c2e7bbff', '#c1e6baff', '#c1e6baff', '#c0e6b9ff', '#bfe6b9ff', '#bee5b8ff', '#bee5b7ff', '#bde5b6ff', '#bde5b6ff', '#bce4b5ff', '#bce4b5ff', '#bbe4b4ff', '#bbe4b4ff', '#bae3b3ff', '#b9e3b3ff', '#b8e3b2ff', '#b8e3b2ff', '#b7e2b1ff', '#b7e2b0ff', '#b6e2afff', '#b6e2aeff', '#b5e1aeff', '#b4e1adff', '#b4e1adff', '#b3e1acff', '#b2e0acff', '#b1e0abff', '#b1e0abff', '#b0e0aaff', '#b0dfaaff', '#afdfa9ff', '#afdfa8ff', '#aedfa7ff', '#addea7ff', '#acdea6ff', '#acdea6ff', '#abdda5ff', '#abdda5ff', '#aadda4ff', '#aadda4ff', '#a9dca3ff', '#a9dca3ff', '#a8dca2ff', '#a8dca1ff', '#a7dba0ff', '#a6dba0ff', '#a5db9fff', '#a5db9fff', '#a4da9eff', '#a4da9eff', '#a3da9dff', '#a3da9dff', '#a2d99cff', '#a1d99cff', '#a0d99bff', '#a0d99aff', '#9fd899ff', '#9fd898ff', '#9ed798ff', '#9dd797ff', '#9cd797ff', '#9bd796ff', '#9bd696ff', '#9ad695ff', '#99d595ff', '#98d594ff', '#98d594ff', '#97d593ff', '#97d492ff', '#96d491ff', '#95d391ff', '#94d390ff', '#94d390ff', '#93d38fff', '#92d28fff', '#91d28eff', '#91d28eff', '#90d18dff', '#8fd18cff', '#8ed08bff', '#8ed08bff', '#8dd08aff', '#8cd08aff', '#8bcf89ff', '#8bcf89ff', '#8ace88ff', '#89ce88ff', '#88ce87ff', '#88ce87ff', '#87cd86ff', '#87cd86ff', '#86cc85ff', '#85cc84ff', '#84cc83ff', '#84cc82ff', '#83cb82ff', '#82cb81ff', '#81ca81ff', '#80ca80ff', '#80ca80ff', '#7fca7fff', '#7fc97fff', '#7ec97eff', '#7dc87eff', '#7cc87dff', '#7cc87cff', '#7bc87bff', '#7ac77bff', '#79c77aff', '#79c67aff', '#78c679ff', '#78c679ff', '#77c678ff', '#76c578ff', '#75c577ff', '#74c477ff', '#73c476ff', '#73c476ff', '#72c375ff', '#71c375ff', '#70c274ff', '#6fc274ff', '#6ec173ff', '#6ec173ff', '#6dc072ff', '#6cc072ff', '#6bc072ff', '#6bc072ff', '#6abf71ff', '#69bf71ff', '#68be70ff', '#67be70ff', '#66bd6fff', '#65bd6fff', '#65bd6fff', '#64bd6eff', '#63bc6eff', '#62bc6dff', '#62bb6dff', '#61bb6cff', '#60ba6cff', '#5fba6bff', '#5eb96bff', '#5db96bff', '#5db96bff', '#5cb96aff', '#5bb86aff', '#5ab869ff', '#5ab769ff', '#59b768ff', '#58b668ff', '#57b667ff', '#56b567ff', '#55b567ff', '#54b567ff', '#53b566ff', '#53b466ff', '#52b365ff', '#51b365ff', '#50b264ff', '#4fb264ff', '#4eb264ff', '#4eb264ff', '#4db163ff', '#4cb163ff', '#4bb062ff', '#4ab062ff', '#4aaf61ff', '#49af61ff', '#48ae60ff', '#47ae60ff', '#46ae60ff', '#45ae60ff', '#45ad5fff', '#44ad5eff', '#43ac5eff', '#42ac5dff', '#42ab5dff', '#41ab5dff', '#40aa5dff', '#3faa5cff', '#3fa95cff', '#3fa95bff', '#3fa85bff', '#3ea85aff', '#3ea75aff', '#3da75aff', '#3da65aff', '#3ca659ff', '#3ca559ff', '#3ba558ff', '#3ba458ff', '#3aa457ff', '#3aa357ff', '#39a357ff', '#39a257ff', '#38a156ff', '#38a156ff', '#37a055ff', '#37a055ff', '#369f54ff', '#369f54ff', '#359e53ff', '#349e53ff', '#349d53ff', '#339d53ff', '#339c52ff', '#329c52ff', '#329b51ff', '#319b51ff', '#319a50ff', '#309a50ff', '#309950ff', '#2f994fff', '#2f984fff', '#2f984eff', '#2f974eff', '#2e974dff', '#2e964dff', '#2d964dff', '#2d954dff', '#2c954cff', '#2c944cff', '#2b944bff', '#2b934bff', '#2a934aff', '#2a924aff', '#29924aff', '#29914aff', '#289149ff', '#289049ff', '#279048ff', '#278f48ff', '#268f47ff', '#268e47ff', '#258d47ff', '#258d47ff', '#248c46ff', '#248c46ff', '#238b45ff', '#238b45ff', '#228a44ff', '#218a44ff', '#218944ff', '#208944ff', '#208843ff', '#1f8843ff', '#1f8742ff', '#1e8742ff', '#1e8741ff', '#1d8741ff', '#1d8640ff', '#1c8640ff', '#1c8540ff', '#1b853fff', '#1a843fff', '#19843eff', '#19833eff', '#18833dff', '#18823dff', '#17823dff', '#17813dff', '#16813cff', '#16803cff', '#15803bff', '#157f3bff', '#147f3aff', '#147e3aff', '#137e39ff', '#137d39ff', '#127d39ff', '#127c39ff', '#117c38ff', '#117b38ff', '#107a37ff', '#107a37ff', '#0f7936ff', '#0e7936ff', '#0d7836ff', '#0c7836ff', '#0c7735ff', '#0b7735ff', '#0b7734ff', '#0a7734ff', '#0a7633ff', '#097633ff', '#097532ff', '#087532ff', '#087432ff', '#077432ff', '#077331ff', '#067331ff', '#067230ff', '#05722fff', '#05712fff', '#04712eff', '#03702eff', '#02702eff', '#026f2eff', '#016f2dff', '#016e2dff', '#006e2cff', '#006d2cff', '#006d2cff', '#006c2cff', '#006c2bff', '#006b2bff', '#006a2aff', '#00692aff', '#00692aff', '#00682aff', '#006829ff', '#006729ff', '#006629ff', '#006529ff', '#006428ff', '#006428ff', '#006328ff', '#006328ff', '#006227ff', '#006227ff', '#006127ff', '#006027ff', '#005f26ff', '#005f26ff', '#005e26ff', '#005e26ff', '#005d25ff', '#005c25ff', '#005b25ff', '#005b25ff', '#005a24ff', '#005a24ff', '#005924ff', '#005923ff', '#005823ff', '#005722ff', '#005622ff', '#005622ff', '#005522ff', '#005421ff', '#005321ff', '#005321ff', '#005221ff', '#005220ff', '#005120ff', '#005120ff', '#005020ff', '#004f1fff', '#004e1fff', '#004d1fff', '#004d1fff', '#004c1eff', '#004c1eff', '#004b1eff', '#004a1eff', '#00491dff', '#00491dff', '#00481dff', '#00481dff', '#00471cff', '#00471cff', '#00461cff', '#00451cff', '#00441bff', '#00441bff']);
+    
+
+    color_map_3e86b901f7026328b14ae581763706f3.x = d3.scale.linear()
+              .domain([0.178, 0.7749999999999999])
+              .range([0, 450 - 50]);
+
+    color_map_3e86b901f7026328b14ae581763706f3.legend = L.control({position: 'topright'});
+    color_map_3e86b901f7026328b14ae581763706f3.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_3e86b901f7026328b14ae581763706f3.legend.addTo(map_0d0880c7c38b4f22c5e7c2453c29c579);
+
+    color_map_3e86b901f7026328b14ae581763706f3.xAxis = d3.svg.axis()
+        .scale(color_map_3e86b901f7026328b14ae581763706f3.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([0.178, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0.2388705882352941, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0.29974117647058823, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0.3606117647058823, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0.4214823529411764, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0.4823529411764706, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0.5432235294117647, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0.6040941176470588, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0.6649647058823529, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0.7258352941176471, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']);
+
+    color_map_3e86b901f7026328b14ae581763706f3.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_3e86b901f7026328b14ae581763706f3.g = color_map_3e86b901f7026328b14ae581763706f3.svg.append("g")
+        .attr("class", "key")
+        .attr("fill", "black")
+        .attr("transform", "translate(25,16)");
+
+    color_map_3e86b901f7026328b14ae581763706f3.g.selectAll("rect")
+        .data(color_map_3e86b901f7026328b14ae581763706f3.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_3e86b901f7026328b14ae581763706f3.x(color_map_3e86b901f7026328b14ae581763706f3.color.domain()[i - 1]) : color_map_3e86b901f7026328b14ae581763706f3.x.range()[0],
+            x1: i < color_map_3e86b901f7026328b14ae581763706f3.color.domain().length ? color_map_3e86b901f7026328b14ae581763706f3.x(color_map_3e86b901f7026328b14ae581763706f3.color.domain()[i]) : color_map_3e86b901f7026328b14ae581763706f3.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 40 - 30)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_3e86b901f7026328b14ae581763706f3.g.call(color_map_3e86b901f7026328b14ae581763706f3.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .attr("fill", "black")
+        .text("final_score");
+    
+        function geo_json_ae33d92bed2a86cf55dcfab8be3c0840_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#F5A524", "fillColor": "#F5A524", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+        function geo_json_ae33d92bed2a86cf55dcfab8be3c0840_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0.75};
+            }
+        }
+        function geo_json_ae33d92bed2a86cf55dcfab8be3c0840_pointToLayer(feature, latlng) {
+            var opts = {
+  "stroke": true,
+  "color": "#3388ff",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "#3388ff",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 3,
+};
+            
+            let style = geo_json_ae33d92bed2a86cf55dcfab8be3c0840_styler(feature)
+            Object.assign(opts, style)
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_ae33d92bed2a86cf55dcfab8be3c0840_onEachFeature(feature, layer) {
+
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                            geo_json_ae33d92bed2a86cf55dcfab8be3c0840.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_ae33d92bed2a86cf55dcfab8be3c0840_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_ae33d92bed2a86cf55dcfab8be3c0840 = L.geoJson(null, {
+                onEachFeature: geo_json_ae33d92bed2a86cf55dcfab8be3c0840_onEachFeature,
+            
+                style: geo_json_ae33d92bed2a86cf55dcfab8be3c0840_styler,
+                pointToLayer: geo_json_ae33d92bed2a86cf55dcfab8be3c0840_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_ae33d92bed2a86cf55dcfab8be3c0840_add (data) {
+            geo_json_ae33d92bed2a86cf55dcfab8be3c0840
+                .addData(data);
+        }
+            geo_json_ae33d92bed2a86cf55dcfab8be3c0840_add({"bbox": [106.74228048519457, -6.259545203879078, 106.85634737393924, -6.141502267197897], "features": [{"bbox": [106.8144893571714, -6.216044311101404, 106.8144893571714, -6.216044311101404], "geometry": {"coordinates": [106.8144893571714, -6.216044311101404], "type": "Point"}, "id": "0", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_000"}, "type": "Feature"}, {"bbox": [106.8399461081185, -6.198376304090814, 106.8399461081185, -6.198376304090814], "geometry": {"coordinates": [106.8399461081185, -6.198376304090814], "type": "Point"}, "id": "1", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_001"}, "type": "Feature"}, {"bbox": [106.81537622053999, -6.228891393452493, 106.81537622053999, -6.228891393452493], "geometry": {"coordinates": [106.81537622053999, -6.228891393452493], "type": "Point"}, "id": "2", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_002"}, "type": "Feature"}, {"bbox": [106.83309526079918, -6.190058798520505, 106.83309526079918, -6.190058798520505], "geometry": {"coordinates": [106.83309526079918, -6.190058798520505], "type": "Point"}, "id": "3", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_003"}, "type": "Feature"}, {"bbox": [106.81415562607872, -6.221502181199527, 106.81415562607872, -6.221502181199527], "geometry": {"coordinates": [106.81415562607872, -6.221502181199527], "type": "Point"}, "id": "4", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_004"}, "type": "Feature"}, {"bbox": [106.80575137244938, -6.215743870685786, 106.80575137244938, -6.215743870685786], "geometry": {"coordinates": [106.80575137244938, -6.215743870685786], "type": "Point"}, "id": "5", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_005"}, "type": "Feature"}, {"bbox": [106.8247086561602, -6.178623457666341, 106.8247086561602, -6.178623457666341], "geometry": {"coordinates": [106.8247086561602, -6.178623457666341], "type": "Point"}, "id": "6", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_006"}, "type": "Feature"}, {"bbox": [106.85261395985599, -6.18942984175056, 106.85261395985599, -6.18942984175056], "geometry": {"coordinates": [106.85261395985599, -6.18942984175056], "type": "Point"}, "id": "7", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_007"}, "type": "Feature"}, {"bbox": [106.8106145026562, -6.250218316541586, 106.8106145026562, -6.250218316541586], "geometry": {"coordinates": [106.8106145026562, -6.250218316541586], "type": "Point"}, "id": "8", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_008"}, "type": "Feature"}, {"bbox": [106.81013029040193, -6.245601471024907, 106.81013029040193, -6.245601471024907], "geometry": {"coordinates": [106.81013029040193, -6.245601471024907], "type": "Point"}, "id": "9", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_009"}, "type": "Feature"}, {"bbox": [106.8234745956431, -6.223621177178045, 106.8234745956431, -6.223621177178045], "geometry": {"coordinates": [106.8234745956431, -6.223621177178045], "type": "Point"}, "id": "10", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_010"}, "type": "Feature"}, {"bbox": [106.8226443989455, -6.25239794291855, 106.8226443989455, -6.25239794291855], "geometry": {"coordinates": [106.8226443989455, -6.25239794291855], "type": "Point"}, "id": "11", "properties": {"__folium_color": "#F5A524", "brand": "Tomoro", "id": "competitor_011"}, "type": "Feature"}, {"bbox": [106.79772311790757, -6.218810140599102, 106.79772311790757, -6.218810140599102], "geometry": {"coordinates": [106.79772311790757, -6.218810140599102], "type": "Point"}, "id": "12", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_012"}, "type": "Feature"}, {"bbox": [106.8100084158186, -6.216788078117802, 106.8100084158186, -6.216788078117802], "geometry": {"coordinates": [106.8100084158186, -6.216788078117802], "type": "Point"}, "id": "13", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_013"}, "type": "Feature"}, {"bbox": [106.82207603414984, -6.19755068831977, 106.82207603414984, -6.19755068831977], "geometry": {"coordinates": [106.82207603414984, -6.19755068831977], "type": "Point"}, "id": "14", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_014"}, "type": "Feature"}, {"bbox": [106.82344925273817, -6.208276775129088, 106.82344925273817, -6.208276775129088], "geometry": {"coordinates": [106.82344925273817, -6.208276775129088], "type": "Point"}, "id": "15", "properties": {"__folium_color": "#F5A524", "brand": "Tomoro", "id": "competitor_015"}, "type": "Feature"}, {"bbox": [106.83234649850816, -6.195783255009074, 106.83234649850816, -6.195783255009074], "geometry": {"coordinates": [106.83234649850816, -6.195783255009074], "type": "Point"}, "id": "16", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_016"}, "type": "Feature"}, {"bbox": [106.81129255889891, -6.240713389611069, 106.81129255889891, -6.240713389611069], "geometry": {"coordinates": [106.81129255889891, -6.240713389611069], "type": "Point"}, "id": "17", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_017"}, "type": "Feature"}, {"bbox": [106.80419787429308, -6.235705722491311, 106.80419787429308, -6.235705722491311], "geometry": {"coordinates": [106.80419787429308, -6.235705722491311], "type": "Point"}, "id": "18", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_018"}, "type": "Feature"}, {"bbox": [106.82837941709748, -6.259545203879078, 106.82837941709748, -6.259545203879078], "geometry": {"coordinates": [106.82837941709748, -6.259545203879078], "type": "Point"}, "id": "19", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_019"}, "type": "Feature"}, {"bbox": [106.83217134499931, -6.251808019308191, 106.83217134499931, -6.251808019308191], "geometry": {"coordinates": [106.83217134499931, -6.251808019308191], "type": "Point"}, "id": "20", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_020"}, "type": "Feature"}, {"bbox": [106.81846806239847, -6.216680103602547, 106.81846806239847, -6.216680103602547], "geometry": {"coordinates": [106.81846806239847, -6.216680103602547], "type": "Point"}, "id": "21", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_021"}, "type": "Feature"}, {"bbox": [106.83251039636575, -6.197513453765365, 106.83251039636575, -6.197513453765365], "geometry": {"coordinates": [106.83251039636575, -6.197513453765365], "type": "Point"}, "id": "22", "properties": {"__folium_color": "#F5A524", "brand": "Fore Coffee", "id": "competitor_022"}, "type": "Feature"}, {"bbox": [106.78486325782319, -6.224449006177455, 106.78486325782319, -6.224449006177455], "geometry": {"coordinates": [106.78486325782319, -6.224449006177455], "type": "Point"}, "id": "23", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_023"}, "type": "Feature"}, {"bbox": [106.8289665860324, -6.252713629542778, 106.8289665860324, -6.252713629542778], "geometry": {"coordinates": [106.8289665860324, -6.252713629542778], "type": "Point"}, "id": "24", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_024"}, "type": "Feature"}, {"bbox": [106.82945762155731, -6.188224583530591, 106.82945762155731, -6.188224583530591], "geometry": {"coordinates": [106.82945762155731, -6.188224583530591], "type": "Point"}, "id": "25", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_025"}, "type": "Feature"}, {"bbox": [106.82901734022275, -6.200088965127026, 106.82901734022275, -6.200088965127026], "geometry": {"coordinates": [106.82901734022275, -6.200088965127026], "type": "Point"}, "id": "26", "properties": {"__folium_color": "#F5A524", "brand": "Tomoro", "id": "competitor_026"}, "type": "Feature"}, {"bbox": [106.8010557606062, -6.212348882070866, 106.8010557606062, -6.212348882070866], "geometry": {"coordinates": [106.8010557606062, -6.212348882070866], "type": "Point"}, "id": "27", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_027"}, "type": "Feature"}, {"bbox": [106.83774570936828, -6.165802757015542, 106.83774570936828, -6.165802757015542], "geometry": {"coordinates": [106.83774570936828, -6.165802757015542], "type": "Point"}, "id": "28", "properties": {"__folium_color": "#F5A524", "brand": "Tomoro", "id": "competitor_028"}, "type": "Feature"}, {"bbox": [106.81216336101028, -6.244800964501849, 106.81216336101028, -6.244800964501849], "geometry": {"coordinates": [106.81216336101028, -6.244800964501849], "type": "Point"}, "id": "29", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_029"}, "type": "Feature"}, {"bbox": [106.84363075897481, -6.209065644210352, 106.84363075897481, -6.209065644210352], "geometry": {"coordinates": [106.84363075897481, -6.209065644210352], "type": "Point"}, "id": "30", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_030"}, "type": "Feature"}, {"bbox": [106.81068595079978, -6.258306379120271, 106.81068595079978, -6.258306379120271], "geometry": {"coordinates": [106.81068595079978, -6.258306379120271], "type": "Point"}, "id": "31", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_031"}, "type": "Feature"}, {"bbox": [106.79591542715877, -6.231064904494678, 106.79591542715877, -6.231064904494678], "geometry": {"coordinates": [106.79591542715877, -6.231064904494678], "type": "Point"}, "id": "32", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_032"}, "type": "Feature"}, {"bbox": [106.80591389927032, -6.25830903343551, 106.80591389927032, -6.25830903343551], "geometry": {"coordinates": [106.80591389927032, -6.25830903343551], "type": "Point"}, "id": "33", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_033"}, "type": "Feature"}, {"bbox": [106.8011177994125, -6.228250136358592, 106.8011177994125, -6.228250136358592], "geometry": {"coordinates": [106.8011177994125, -6.228250136358592], "type": "Point"}, "id": "34", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_034"}, "type": "Feature"}, {"bbox": [106.85447585589205, -6.189490574609345, 106.85447585589205, -6.189490574609345], "geometry": {"coordinates": [106.85447585589205, -6.189490574609345], "type": "Point"}, "id": "35", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_035"}, "type": "Feature"}, {"bbox": [106.83919583308436, -6.182832411342621, 106.83919583308436, -6.182832411342621], "geometry": {"coordinates": [106.83919583308436, -6.182832411342621], "type": "Point"}, "id": "36", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_036"}, "type": "Feature"}, {"bbox": [106.85634737393924, -6.179221056750097, 106.85634737393924, -6.179221056750097], "geometry": {"coordinates": [106.85634737393924, -6.179221056750097], "type": "Point"}, "id": "37", "properties": {"__folium_color": "#F5A524", "brand": "Fore Coffee", "id": "competitor_037"}, "type": "Feature"}, {"bbox": [106.80133944802994, -6.253662445613812, 106.80133944802994, -6.253662445613812], "geometry": {"coordinates": [106.80133944802994, -6.253662445613812], "type": "Point"}, "id": "38", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_038"}, "type": "Feature"}, {"bbox": [106.82328604662905, -6.248435679246543, 106.82328604662905, -6.248435679246543], "geometry": {"coordinates": [106.82328604662905, -6.248435679246543], "type": "Point"}, "id": "39", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_039"}, "type": "Feature"}, {"bbox": [106.81230678648035, -6.259136099975297, 106.81230678648035, -6.259136099975297], "geometry": {"coordinates": [106.81230678648035, -6.259136099975297], "type": "Point"}, "id": "40", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_040"}, "type": "Feature"}, {"bbox": [106.82336622515794, -6.200422569670901, 106.82336622515794, -6.200422569670901], "geometry": {"coordinates": [106.82336622515794, -6.200422569670901], "type": "Point"}, "id": "41", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_041"}, "type": "Feature"}, {"bbox": [106.81500308631463, -6.20871192256283, 106.81500308631463, -6.20871192256283], "geometry": {"coordinates": [106.81500308631463, -6.20871192256283], "type": "Point"}, "id": "42", "properties": {"__folium_color": "#F5A524", "brand": "Fore Coffee", "id": "competitor_042"}, "type": "Feature"}, {"bbox": [106.81754405160112, -6.258718624551493, 106.81754405160112, -6.258718624551493], "geometry": {"coordinates": [106.81754405160112, -6.258718624551493], "type": "Point"}, "id": "43", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_043"}, "type": "Feature"}, {"bbox": [106.80576491718995, -6.255480291352103, 106.80576491718995, -6.255480291352103], "geometry": {"coordinates": [106.80576491718995, -6.255480291352103], "type": "Point"}, "id": "44", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_044"}, "type": "Feature"}, {"bbox": [106.80148571200978, -6.218880375205311, 106.80148571200978, -6.218880375205311], "geometry": {"coordinates": [106.80148571200978, -6.218880375205311], "type": "Point"}, "id": "45", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_045"}, "type": "Feature"}, {"bbox": [106.80867593027538, -6.222391201859613, 106.80867593027538, -6.222391201859613], "geometry": {"coordinates": [106.80867593027538, -6.222391201859613], "type": "Point"}, "id": "46", "properties": {"__folium_color": "#F5A524", "brand": "Tomoro", "id": "competitor_046"}, "type": "Feature"}, {"bbox": [106.82942729754102, -6.204033369174477, 106.82942729754102, -6.204033369174477], "geometry": {"coordinates": [106.82942729754102, -6.204033369174477], "type": "Point"}, "id": "47", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_047"}, "type": "Feature"}, {"bbox": [106.81206081688198, -6.243854001443028, 106.81206081688198, -6.243854001443028], "geometry": {"coordinates": [106.81206081688198, -6.243854001443028], "type": "Point"}, "id": "48", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_048"}, "type": "Feature"}, {"bbox": [106.85392013077144, -6.215938435747097, 106.85392013077144, -6.215938435747097], "geometry": {"coordinates": [106.85392013077144, -6.215938435747097], "type": "Point"}, "id": "49", "properties": {"__folium_color": "#F5A524", "brand": "Fore Coffee", "id": "competitor_049"}, "type": "Feature"}, {"bbox": [106.80788426979706, -6.232234734978666, 106.80788426979706, -6.232234734978666], "geometry": {"coordinates": [106.80788426979706, -6.232234734978666], "type": "Point"}, "id": "50", "properties": {"__folium_color": "#F5A524", "brand": "Tomoro", "id": "competitor_050"}, "type": "Feature"}, {"bbox": [106.81523052686099, -6.219446699076939, 106.81523052686099, -6.219446699076939], "geometry": {"coordinates": [106.81523052686099, -6.219446699076939], "type": "Point"}, "id": "51", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_051"}, "type": "Feature"}, {"bbox": [106.81417359141179, -6.214924691726896, 106.81417359141179, -6.214924691726896], "geometry": {"coordinates": [106.81417359141179, -6.214924691726896], "type": "Point"}, "id": "52", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_052"}, "type": "Feature"}, {"bbox": [106.80344909780129, -6.213259538745114, 106.80344909780129, -6.213259538745114], "geometry": {"coordinates": [106.80344909780129, -6.213259538745114], "type": "Point"}, "id": "53", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_053"}, "type": "Feature"}, {"bbox": [106.80943418630697, -6.236360373103719, 106.80943418630697, -6.236360373103719], "geometry": {"coordinates": [106.80943418630697, -6.236360373103719], "type": "Point"}, "id": "54", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_054"}, "type": "Feature"}, {"bbox": [106.82952078660405, -6.20558008979573, 106.82952078660405, -6.20558008979573], "geometry": {"coordinates": [106.82952078660405, -6.20558008979573], "type": "Point"}, "id": "55", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_055"}, "type": "Feature"}, {"bbox": [106.83526845269924, -6.201634231539464, 106.83526845269924, -6.201634231539464], "geometry": {"coordinates": [106.83526845269924, -6.201634231539464], "type": "Point"}, "id": "56", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_056"}, "type": "Feature"}, {"bbox": [106.84255252037411, -6.237631715737756, 106.84255252037411, -6.237631715737756], "geometry": {"coordinates": [106.84255252037411, -6.237631715737756], "type": "Point"}, "id": "57", "properties": {"__folium_color": "#F5A524", "brand": "Fore Coffee", "id": "competitor_057"}, "type": "Feature"}, {"bbox": [106.80502101670565, -6.212209757844833, 106.80502101670565, -6.212209757844833], "geometry": {"coordinates": [106.80502101670565, -6.212209757844833], "type": "Point"}, "id": "58", "properties": {"__folium_color": "#F5A524", "brand": "Fore Coffee", "id": "competitor_058"}, "type": "Feature"}, {"bbox": [106.81975928965905, -6.220906578890827, 106.81975928965905, -6.220906578890827], "geometry": {"coordinates": [106.81975928965905, -6.220906578890827], "type": "Point"}, "id": "59", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_059"}, "type": "Feature"}, {"bbox": [106.83316185102731, -6.177191657710983, 106.83316185102731, -6.177191657710983], "geometry": {"coordinates": [106.83316185102731, -6.177191657710983], "type": "Point"}, "id": "60", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_060"}, "type": "Feature"}, {"bbox": [106.79193736895347, -6.231497523187827, 106.79193736895347, -6.231497523187827], "geometry": {"coordinates": [106.79193736895347, -6.231497523187827], "type": "Point"}, "id": "61", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_061"}, "type": "Feature"}, {"bbox": [106.83010062203685, -6.191514737022319, 106.83010062203685, -6.191514737022319], "geometry": {"coordinates": [106.83010062203685, -6.191514737022319], "type": "Point"}, "id": "62", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_062"}, "type": "Feature"}, {"bbox": [106.83562328990664, -6.218918802722801, 106.83562328990664, -6.218918802722801], "geometry": {"coordinates": [106.83562328990664, -6.218918802722801], "type": "Point"}, "id": "63", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_063"}, "type": "Feature"}, {"bbox": [106.8260296621686, -6.216936311708372, 106.8260296621686, -6.216936311708372], "geometry": {"coordinates": [106.8260296621686, -6.216936311708372], "type": "Point"}, "id": "64", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_064"}, "type": "Feature"}, {"bbox": [106.81862919470943, -6.213340927432802, 106.81862919470943, -6.213340927432802], "geometry": {"coordinates": [106.81862919470943, -6.213340927432802], "type": "Point"}, "id": "65", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_065"}, "type": "Feature"}, {"bbox": [106.79555022146846, -6.233307488309507, 106.79555022146846, -6.233307488309507], "geometry": {"coordinates": [106.79555022146846, -6.233307488309507], "type": "Point"}, "id": "66", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_066"}, "type": "Feature"}, {"bbox": [106.82375871499275, -6.211415571101567, 106.82375871499275, -6.211415571101567], "geometry": {"coordinates": [106.82375871499275, -6.211415571101567], "type": "Point"}, "id": "67", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_067"}, "type": "Feature"}, {"bbox": [106.82642544790997, -6.182690816368268, 106.82642544790997, -6.182690816368268], "geometry": {"coordinates": [106.82642544790997, -6.182690816368268], "type": "Point"}, "id": "68", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_068"}, "type": "Feature"}, {"bbox": [106.82278436987849, -6.224625880057117, 106.82278436987849, -6.224625880057117], "geometry": {"coordinates": [106.82278436987849, -6.224625880057117], "type": "Point"}, "id": "69", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_069"}, "type": "Feature"}, {"bbox": [106.79574544498632, -6.211543147956117, 106.79574544498632, -6.211543147956117], "geometry": {"coordinates": [106.79574544498632, -6.211543147956117], "type": "Point"}, "id": "70", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_070"}, "type": "Feature"}, {"bbox": [106.82385154486074, -6.190252878304681, 106.82385154486074, -6.190252878304681], "geometry": {"coordinates": [106.82385154486074, -6.190252878304681], "type": "Point"}, "id": "71", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_071"}, "type": "Feature"}, {"bbox": [106.83727068784584, -6.180430036604945, 106.83727068784584, -6.180430036604945], "geometry": {"coordinates": [106.83727068784584, -6.180430036604945], "type": "Point"}, "id": "72", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_072"}, "type": "Feature"}, {"bbox": [106.80630625966113, -6.226746191095608, 106.80630625966113, -6.226746191095608], "geometry": {"coordinates": [106.80630625966113, -6.226746191095608], "type": "Point"}, "id": "73", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_073"}, "type": "Feature"}, {"bbox": [106.84666203806044, -6.200561079665308, 106.84666203806044, -6.200561079665308], "geometry": {"coordinates": [106.84666203806044, -6.200561079665308], "type": "Point"}, "id": "74", "properties": {"__folium_color": "#F5A524", "brand": "Fore Coffee", "id": "competitor_074"}, "type": "Feature"}, {"bbox": [106.8087488254059, -6.225407153029387, 106.8087488254059, -6.225407153029387], "geometry": {"coordinates": [106.8087488254059, -6.225407153029387], "type": "Point"}, "id": "75", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_075"}, "type": "Feature"}, {"bbox": [106.80941834016855, -6.242789224827369, 106.80941834016855, -6.242789224827369], "geometry": {"coordinates": [106.80941834016855, -6.242789224827369], "type": "Point"}, "id": "76", "properties": {"__folium_color": "#F5A524", "brand": "Fore Coffee", "id": "competitor_076"}, "type": "Feature"}, {"bbox": [106.8289499382126, -6.236130091277479, 106.8289499382126, -6.236130091277479], "geometry": {"coordinates": [106.8289499382126, -6.236130091277479], "type": "Point"}, "id": "77", "properties": {"__folium_color": "#F5A524", "brand": "Tomoro", "id": "competitor_077"}, "type": "Feature"}, {"bbox": [106.84036000121776, -6.167562980178376, 106.84036000121776, -6.167562980178376], "geometry": {"coordinates": [106.84036000121776, -6.167562980178376], "type": "Point"}, "id": "78", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_078"}, "type": "Feature"}, {"bbox": [106.83128708723432, -6.185003022918265, 106.83128708723432, -6.185003022918265], "geometry": {"coordinates": [106.83128708723432, -6.185003022918265], "type": "Point"}, "id": "79", "properties": {"__folium_color": "#F5A524", "brand": "Fore Coffee", "id": "competitor_079"}, "type": "Feature"}, {"bbox": [106.82110442704055, -6.238823693794198, 106.82110442704055, -6.238823693794198], "geometry": {"coordinates": [106.82110442704055, -6.238823693794198], "type": "Point"}, "id": "80", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_080"}, "type": "Feature"}, {"bbox": [106.83749743516482, -6.227782325614892, 106.83749743516482, -6.227782325614892], "geometry": {"coordinates": [106.83749743516482, -6.227782325614892], "type": "Point"}, "id": "81", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_081"}, "type": "Feature"}, {"bbox": [106.82872196692819, -6.186154557113889, 106.82872196692819, -6.186154557113889], "geometry": {"coordinates": [106.82872196692819, -6.186154557113889], "type": "Point"}, "id": "82", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_082"}, "type": "Feature"}, {"bbox": [106.81809603983459, -6.209521990261583, 106.81809603983459, -6.209521990261583], "geometry": {"coordinates": [106.81809603983459, -6.209521990261583], "type": "Point"}, "id": "83", "properties": {"__folium_color": "#F5A524", "brand": "Tomoro", "id": "competitor_083"}, "type": "Feature"}, {"bbox": [106.80279836608209, -6.218992769590434, 106.80279836608209, -6.218992769590434], "geometry": {"coordinates": [106.80279836608209, -6.218992769590434], "type": "Point"}, "id": "84", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_084"}, "type": "Feature"}, {"bbox": [106.81697828185106, -6.197218216856615, 106.81697828185106, -6.197218216856615], "geometry": {"coordinates": [106.81697828185106, -6.197218216856615], "type": "Point"}, "id": "85", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_085"}, "type": "Feature"}, {"bbox": [106.81436308466532, -6.235116601678189, 106.81436308466532, -6.235116601678189], "geometry": {"coordinates": [106.81436308466532, -6.235116601678189], "type": "Point"}, "id": "86", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_086"}, "type": "Feature"}, {"bbox": [106.82173452742252, -6.256614450794348, 106.82173452742252, -6.256614450794348], "geometry": {"coordinates": [106.82173452742252, -6.256614450794348], "type": "Point"}, "id": "87", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_087"}, "type": "Feature"}, {"bbox": [106.80543060068707, -6.212779786948484, 106.80543060068707, -6.212779786948484], "geometry": {"coordinates": [106.80543060068707, -6.212779786948484], "type": "Point"}, "id": "88", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_088"}, "type": "Feature"}, {"bbox": [106.81718607738486, -6.241584159671417, 106.81718607738486, -6.241584159671417], "geometry": {"coordinates": [106.81718607738486, -6.241584159671417], "type": "Point"}, "id": "89", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_089"}, "type": "Feature"}, {"bbox": [106.79413699235049, -6.220539838769138, 106.79413699235049, -6.220539838769138], "geometry": {"coordinates": [106.79413699235049, -6.220539838769138], "type": "Point"}, "id": "90", "properties": {"__folium_color": "#F5A524", "brand": "Fore Coffee", "id": "competitor_090"}, "type": "Feature"}, {"bbox": [106.80538708430332, -6.201118330672413, 106.80538708430332, -6.201118330672413], "geometry": {"coordinates": [106.80538708430332, -6.201118330672413], "type": "Point"}, "id": "91", "properties": {"__folium_color": "#F5A524", "brand": "Tomoro", "id": "competitor_091"}, "type": "Feature"}, {"bbox": [106.82227030919087, -6.234847907290261, 106.82227030919087, -6.234847907290261], "geometry": {"coordinates": [106.82227030919087, -6.234847907290261], "type": "Point"}, "id": "92", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_092"}, "type": "Feature"}, {"bbox": [106.79292775748476, -6.242185329024263, 106.79292775748476, -6.242185329024263], "geometry": {"coordinates": [106.79292775748476, -6.242185329024263], "type": "Point"}, "id": "93", "properties": {"__folium_color": "#F5A524", "brand": "Tomoro", "id": "competitor_093"}, "type": "Feature"}, {"bbox": [106.80645690670728, -6.23426327349307, 106.80645690670728, -6.23426327349307], "geometry": {"coordinates": [106.80645690670728, -6.23426327349307], "type": "Point"}, "id": "94", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_094"}, "type": "Feature"}, {"bbox": [106.82588968856678, -6.211184093059586, 106.82588968856678, -6.211184093059586], "geometry": {"coordinates": [106.82588968856678, -6.211184093059586], "type": "Point"}, "id": "95", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_095"}, "type": "Feature"}, {"bbox": [106.83967657774396, -6.232963474087659, 106.83967657774396, -6.232963474087659], "geometry": {"coordinates": [106.83967657774396, -6.232963474087659], "type": "Point"}, "id": "96", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_096"}, "type": "Feature"}, {"bbox": [106.81813003705086, -6.246637702529468, 106.81813003705086, -6.246637702529468], "geometry": {"coordinates": [106.81813003705086, -6.246637702529468], "type": "Point"}, "id": "97", "properties": {"__folium_color": "#F5A524", "brand": "Fore Coffee", "id": "competitor_097"}, "type": "Feature"}, {"bbox": [106.81885706443327, -6.257234774955605, 106.81885706443327, -6.257234774955605], "geometry": {"coordinates": [106.81885706443327, -6.257234774955605], "type": "Point"}, "id": "98", "properties": {"__folium_color": "#F5A524", "brand": "Tomoro", "id": "competitor_098"}, "type": "Feature"}, {"bbox": [106.81777483072996, -6.207773900120726, 106.81777483072996, -6.207773900120726], "geometry": {"coordinates": [106.81777483072996, -6.207773900120726], "type": "Point"}, "id": "99", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_099"}, "type": "Feature"}, {"bbox": [106.83148560509208, -6.228132177349102, 106.83148560509208, -6.228132177349102], "geometry": {"coordinates": [106.83148560509208, -6.228132177349102], "type": "Point"}, "id": "100", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_100"}, "type": "Feature"}, {"bbox": [106.78975461202974, -6.223708126622564, 106.78975461202974, -6.223708126622564], "geometry": {"coordinates": [106.78975461202974, -6.223708126622564], "type": "Point"}, "id": "101", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_101"}, "type": "Feature"}, {"bbox": [106.81323038752025, -6.221915712918721, 106.81323038752025, -6.221915712918721], "geometry": {"coordinates": [106.81323038752025, -6.221915712918721], "type": "Point"}, "id": "102", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_102"}, "type": "Feature"}, {"bbox": [106.79063198817153, -6.245174510100769, 106.79063198817153, -6.245174510100769], "geometry": {"coordinates": [106.79063198817153, -6.245174510100769], "type": "Point"}, "id": "103", "properties": {"__folium_color": "#F5A524", "brand": "Fore Coffee", "id": "competitor_103"}, "type": "Feature"}, {"bbox": [106.80945397844033, -6.231678699576713, 106.80945397844033, -6.231678699576713], "geometry": {"coordinates": [106.80945397844033, -6.231678699576713], "type": "Point"}, "id": "104", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_104"}, "type": "Feature"}, {"bbox": [106.83059021030726, -6.219042977490335, 106.83059021030726, -6.219042977490335], "geometry": {"coordinates": [106.83059021030726, -6.219042977490335], "type": "Point"}, "id": "105", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_105"}, "type": "Feature"}, {"bbox": [106.82043504281924, -6.172309211473839, 106.82043504281924, -6.172309211473839], "geometry": {"coordinates": [106.82043504281924, -6.172309211473839], "type": "Point"}, "id": "106", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_106"}, "type": "Feature"}, {"bbox": [106.84753848852309, -6.215313489115329, 106.84753848852309, -6.215313489115329], "geometry": {"coordinates": [106.84753848852309, -6.215313489115329], "type": "Point"}, "id": "107", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_107"}, "type": "Feature"}, {"bbox": [106.82876961361676, -6.218361633425288, 106.82876961361676, -6.218361633425288], "geometry": {"coordinates": [106.82876961361676, -6.218361633425288], "type": "Point"}, "id": "108", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_108"}, "type": "Feature"}, {"bbox": [106.82770015547474, -6.224423171176928, 106.82770015547474, -6.224423171176928], "geometry": {"coordinates": [106.82770015547474, -6.224423171176928], "type": "Point"}, "id": "109", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_109"}, "type": "Feature"}, {"bbox": [106.81124035817467, -6.238723637996435, 106.81124035817467, -6.238723637996435], "geometry": {"coordinates": [106.81124035817467, -6.238723637996435], "type": "Point"}, "id": "110", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_110"}, "type": "Feature"}, {"bbox": [106.8238478084807, -6.247914860629945, 106.8238478084807, -6.247914860629945], "geometry": {"coordinates": [106.8238478084807, -6.247914860629945], "type": "Point"}, "id": "111", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_111"}, "type": "Feature"}, {"bbox": [106.82883780337806, -6.204332251170974, 106.82883780337806, -6.204332251170974], "geometry": {"coordinates": [106.82883780337806, -6.204332251170974], "type": "Point"}, "id": "112", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_112"}, "type": "Feature"}, {"bbox": [106.8274499722696, -6.213304932501978, 106.8274499722696, -6.213304932501978], "geometry": {"coordinates": [106.8274499722696, -6.213304932501978], "type": "Point"}, "id": "113", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_113"}, "type": "Feature"}, {"bbox": [106.78116057586811, -6.226225532570171, 106.78116057586811, -6.226225532570171], "geometry": {"coordinates": [106.78116057586811, -6.226225532570171], "type": "Point"}, "id": "114", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_114"}, "type": "Feature"}, {"bbox": [106.79676018175773, -6.235941191735757, 106.79676018175773, -6.235941191735757], "geometry": {"coordinates": [106.79676018175773, -6.235941191735757], "type": "Point"}, "id": "115", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_115"}, "type": "Feature"}, {"bbox": [106.80072168911397, -6.224485023828018, 106.80072168911397, -6.224485023828018], "geometry": {"coordinates": [106.80072168911397, -6.224485023828018], "type": "Point"}, "id": "116", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_116"}, "type": "Feature"}, {"bbox": [106.80741717944893, -6.240537676573842, 106.80741717944893, -6.240537676573842], "geometry": {"coordinates": [106.80741717944893, -6.240537676573842], "type": "Point"}, "id": "117", "properties": {"__folium_color": "#F5A524", "brand": "Tomoro", "id": "competitor_117"}, "type": "Feature"}, {"bbox": [106.7889647632222, -6.251722178792174, 106.7889647632222, -6.251722178792174], "geometry": {"coordinates": [106.7889647632222, -6.251722178792174], "type": "Point"}, "id": "118", "properties": {"__folium_color": "#F5A524", "brand": "Tomoro", "id": "competitor_118"}, "type": "Feature"}, {"bbox": [106.8009156267072, -6.223779220561869, 106.8009156267072, -6.223779220561869], "geometry": {"coordinates": [106.8009156267072, -6.223779220561869], "type": "Point"}, "id": "119", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_119"}, "type": "Feature"}, {"bbox": [106.82433365463156, -6.248226346019033, 106.82433365463156, -6.248226346019033], "geometry": {"coordinates": [106.82433365463156, -6.248226346019033], "type": "Point"}, "id": "120", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_120"}, "type": "Feature"}, {"bbox": [106.8301817481386, -6.228846295888573, 106.8301817481386, -6.228846295888573], "geometry": {"coordinates": [106.8301817481386, -6.228846295888573], "type": "Point"}, "id": "121", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_121"}, "type": "Feature"}, {"bbox": [106.85468279263266, -6.235119236437453, 106.85468279263266, -6.235119236437453], "geometry": {"coordinates": [106.85468279263266, -6.235119236437453], "type": "Point"}, "id": "122", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_122"}, "type": "Feature"}, {"bbox": [106.81771841535655, -6.20154005366645, 106.81771841535655, -6.20154005366645], "geometry": {"coordinates": [106.81771841535655, -6.20154005366645], "type": "Point"}, "id": "123", "properties": {"__folium_color": "#F5A524", "brand": "Tomoro", "id": "competitor_123"}, "type": "Feature"}, {"bbox": [106.81633474200376, -6.243799362588039, 106.81633474200376, -6.243799362588039], "geometry": {"coordinates": [106.81633474200376, -6.243799362588039], "type": "Point"}, "id": "124", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_124"}, "type": "Feature"}, {"bbox": [106.83057144083507, -6.245211723808715, 106.83057144083507, -6.245211723808715], "geometry": {"coordinates": [106.83057144083507, -6.245211723808715], "type": "Point"}, "id": "125", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_125"}, "type": "Feature"}, {"bbox": [106.8516936164872, -6.198035145586212, 106.8516936164872, -6.198035145586212], "geometry": {"coordinates": [106.8516936164872, -6.198035145586212], "type": "Point"}, "id": "126", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_126"}, "type": "Feature"}, {"bbox": [106.8095287154443, -6.212442925252231, 106.8095287154443, -6.212442925252231], "geometry": {"coordinates": [106.8095287154443, -6.212442925252231], "type": "Point"}, "id": "127", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_127"}, "type": "Feature"}, {"bbox": [106.7999920312495, -6.224297035851833, 106.7999920312495, -6.224297035851833], "geometry": {"coordinates": [106.7999920312495, -6.224297035851833], "type": "Point"}, "id": "128", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_128"}, "type": "Feature"}, {"bbox": [106.81293538900475, -6.254276129807858, 106.81293538900475, -6.254276129807858], "geometry": {"coordinates": [106.81293538900475, -6.254276129807858], "type": "Point"}, "id": "129", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_129"}, "type": "Feature"}, {"bbox": [106.81313159000089, -6.234647771786386, 106.81313159000089, -6.234647771786386], "geometry": {"coordinates": [106.81313159000089, -6.234647771786386], "type": "Point"}, "id": "130", "properties": {"__folium_color": "#F5A524", "brand": "Fore Coffee", "id": "competitor_130"}, "type": "Feature"}, {"bbox": [106.803159335817, -6.240657097923012, 106.803159335817, -6.240657097923012], "geometry": {"coordinates": [106.803159335817, -6.240657097923012], "type": "Point"}, "id": "131", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_131"}, "type": "Feature"}, {"bbox": [106.80992708293914, -6.212661388297978, 106.80992708293914, -6.212661388297978], "geometry": {"coordinates": [106.80992708293914, -6.212661388297978], "type": "Point"}, "id": "132", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_132"}, "type": "Feature"}, {"bbox": [106.82071645735441, -6.256195875023147, 106.82071645735441, -6.256195875023147], "geometry": {"coordinates": [106.82071645735441, -6.256195875023147], "type": "Point"}, "id": "133", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_133"}, "type": "Feature"}, {"bbox": [106.79129074792444, -6.228790269931458, 106.79129074792444, -6.228790269931458], "geometry": {"coordinates": [106.79129074792444, -6.228790269931458], "type": "Point"}, "id": "134", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_134"}, "type": "Feature"}, {"bbox": [106.83720506274427, -6.228636197651851, 106.83720506274427, -6.228636197651851], "geometry": {"coordinates": [106.83720506274427, -6.228636197651851], "type": "Point"}, "id": "135", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_135"}, "type": "Feature"}, {"bbox": [106.8209600038395, -6.207788094753556, 106.8209600038395, -6.207788094753556], "geometry": {"coordinates": [106.8209600038395, -6.207788094753556], "type": "Point"}, "id": "136", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_136"}, "type": "Feature"}, {"bbox": [106.84596078725504, -6.204853008853473, 106.84596078725504, -6.204853008853473], "geometry": {"coordinates": [106.84596078725504, -6.204853008853473], "type": "Point"}, "id": "137", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_137"}, "type": "Feature"}, {"bbox": [106.82536697461781, -6.196266309731844, 106.82536697461781, -6.196266309731844], "geometry": {"coordinates": [106.82536697461781, -6.196266309731844], "type": "Point"}, "id": "138", "properties": {"__folium_color": "#F5A524", "brand": "Fore Coffee", "id": "competitor_138"}, "type": "Feature"}, {"bbox": [106.82889493777144, -6.256493160684873, 106.82889493777144, -6.256493160684873], "geometry": {"coordinates": [106.82889493777144, -6.256493160684873], "type": "Point"}, "id": "139", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_139"}, "type": "Feature"}, {"bbox": [106.81479207037539, -6.252594696707747, 106.81479207037539, -6.252594696707747], "geometry": {"coordinates": [106.81479207037539, -6.252594696707747], "type": "Point"}, "id": "140", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_140"}, "type": "Feature"}, {"bbox": [106.81569469036369, -6.232219057456859, 106.81569469036369, -6.232219057456859], "geometry": {"coordinates": [106.81569469036369, -6.232219057456859], "type": "Point"}, "id": "141", "properties": {"__folium_color": "#F5A524", "brand": "Tomoro", "id": "competitor_141"}, "type": "Feature"}, {"bbox": [106.8431803532287, -6.193584531671953, 106.8431803532287, -6.193584531671953], "geometry": {"coordinates": [106.8431803532287, -6.193584531671953], "type": "Point"}, "id": "142", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_142"}, "type": "Feature"}, {"bbox": [106.83454737402471, -6.222902302871283, 106.83454737402471, -6.222902302871283], "geometry": {"coordinates": [106.83454737402471, -6.222902302871283], "type": "Point"}, "id": "143", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_143"}, "type": "Feature"}, {"bbox": [106.7935106622246, -6.21991382835814, 106.7935106622246, -6.21991382835814], "geometry": {"coordinates": [106.7935106622246, -6.21991382835814], "type": "Point"}, "id": "144", "properties": {"__folium_color": "#F5A524", "brand": "Tomoro", "id": "competitor_144"}, "type": "Feature"}, {"bbox": [106.84958528123396, -6.189800846407156, 106.84958528123396, -6.189800846407156], "geometry": {"coordinates": [106.84958528123396, -6.189800846407156], "type": "Point"}, "id": "145", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_145"}, "type": "Feature"}, {"bbox": [106.83779897500673, -6.235255114976315, 106.83779897500673, -6.235255114976315], "geometry": {"coordinates": [106.83779897500673, -6.235255114976315], "type": "Point"}, "id": "146", "properties": {"__folium_color": "#F5A524", "brand": "Fore Coffee", "id": "competitor_146"}, "type": "Feature"}, {"bbox": [106.79900792271152, -6.232445915303784, 106.79900792271152, -6.232445915303784], "geometry": {"coordinates": [106.79900792271152, -6.232445915303784], "type": "Point"}, "id": "147", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_147"}, "type": "Feature"}, {"bbox": [106.84111787108932, -6.189357624895104, 106.84111787108932, -6.189357624895104], "geometry": {"coordinates": [106.84111787108932, -6.189357624895104], "type": "Point"}, "id": "148", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_148"}, "type": "Feature"}, {"bbox": [106.82415338686361, -6.238358738458897, 106.82415338686361, -6.238358738458897], "geometry": {"coordinates": [106.82415338686361, -6.238358738458897], "type": "Point"}, "id": "149", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_149"}, "type": "Feature"}, {"bbox": [106.8161092727599, -6.254368759558551, 106.8161092727599, -6.254368759558551], "geometry": {"coordinates": [106.8161092727599, -6.254368759558551], "type": "Point"}, "id": "150", "properties": {"__folium_color": "#F5A524", "brand": "Fore Coffee", "id": "competitor_150"}, "type": "Feature"}, {"bbox": [106.80418103777457, -6.246347382306982, 106.80418103777457, -6.246347382306982], "geometry": {"coordinates": [106.80418103777457, -6.246347382306982], "type": "Point"}, "id": "151", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_151"}, "type": "Feature"}, {"bbox": [106.81630387320607, -6.218351531833073, 106.81630387320607, -6.218351531833073], "geometry": {"coordinates": [106.81630387320607, -6.218351531833073], "type": "Point"}, "id": "152", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_152"}, "type": "Feature"}, {"bbox": [106.79692915826821, -6.256526410226184, 106.79692915826821, -6.256526410226184], "geometry": {"coordinates": [106.79692915826821, -6.256526410226184], "type": "Point"}, "id": "153", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_153"}, "type": "Feature"}, {"bbox": [106.83046149164875, -6.193739073970053, 106.83046149164875, -6.193739073970053], "geometry": {"coordinates": [106.83046149164875, -6.193739073970053], "type": "Point"}, "id": "154", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_154"}, "type": "Feature"}, {"bbox": [106.83632652972524, -6.215481610241854, 106.83632652972524, -6.215481610241854], "geometry": {"coordinates": [106.83632652972524, -6.215481610241854], "type": "Point"}, "id": "155", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_155"}, "type": "Feature"}, {"bbox": [106.84224440972648, -6.239174532900079, 106.84224440972648, -6.239174532900079], "geometry": {"coordinates": [106.84224440972648, -6.239174532900079], "type": "Point"}, "id": "156", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_156"}, "type": "Feature"}, {"bbox": [106.83042905705196, -6.201529218326562, 106.83042905705196, -6.201529218326562], "geometry": {"coordinates": [106.83042905705196, -6.201529218326562], "type": "Point"}, "id": "157", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_157"}, "type": "Feature"}, {"bbox": [106.84640962552001, -6.194679698672276, 106.84640962552001, -6.194679698672276], "geometry": {"coordinates": [106.84640962552001, -6.194679698672276], "type": "Point"}, "id": "158", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_158"}, "type": "Feature"}, {"bbox": [106.84056950082315, -6.221526260173987, 106.84056950082315, -6.221526260173987], "geometry": {"coordinates": [106.84056950082315, -6.221526260173987], "type": "Point"}, "id": "159", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_159"}, "type": "Feature"}, {"bbox": [106.8233764513986, -6.22352211334979, 106.8233764513986, -6.22352211334979], "geometry": {"coordinates": [106.8233764513986, -6.22352211334979], "type": "Point"}, "id": "160", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_160"}, "type": "Feature"}, {"bbox": [106.8371185373718, -6.203682342569409, 106.8371185373718, -6.203682342569409], "geometry": {"coordinates": [106.8371185373718, -6.203682342569409], "type": "Point"}, "id": "161", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_161"}, "type": "Feature"}, {"bbox": [106.81892887316133, -6.223345792867288, 106.81892887316133, -6.223345792867288], "geometry": {"coordinates": [106.81892887316133, -6.223345792867288], "type": "Point"}, "id": "162", "properties": {"__folium_color": "#F5A524", "brand": "Tomoro", "id": "competitor_162"}, "type": "Feature"}, {"bbox": [106.78872435108003, -6.209116911445377, 106.78872435108003, -6.209116911445377], "geometry": {"coordinates": [106.78872435108003, -6.209116911445377], "type": "Point"}, "id": "163", "properties": {"__folium_color": "#F5A524", "brand": "Tomoro", "id": "competitor_163"}, "type": "Feature"}, {"bbox": [106.79381605027588, -6.25522550485513, 106.79381605027588, -6.25522550485513], "geometry": {"coordinates": [106.79381605027588, -6.25522550485513], "type": "Point"}, "id": "164", "properties": {"__folium_color": "#F5A524", "brand": "Tomoro", "id": "competitor_164"}, "type": "Feature"}, {"bbox": [106.80750641277312, -6.241080611087605, 106.80750641277312, -6.241080611087605], "geometry": {"coordinates": [106.80750641277312, -6.241080611087605], "type": "Point"}, "id": "165", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_165"}, "type": "Feature"}, {"bbox": [106.81206223510932, -6.240949081664398, 106.81206223510932, -6.240949081664398], "geometry": {"coordinates": [106.81206223510932, -6.240949081664398], "type": "Point"}, "id": "166", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_166"}, "type": "Feature"}, {"bbox": [106.81410584053398, -6.251178399197814, 106.81410584053398, -6.251178399197814], "geometry": {"coordinates": [106.81410584053398, -6.251178399197814], "type": "Point"}, "id": "167", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_167"}, "type": "Feature"}, {"bbox": [106.83906031091398, -6.224505907106469, 106.83906031091398, -6.224505907106469], "geometry": {"coordinates": [106.83906031091398, -6.224505907106469], "type": "Point"}, "id": "168", "properties": {"__folium_color": "#F5A524", "brand": "Tomoro", "id": "competitor_168"}, "type": "Feature"}, {"bbox": [106.81811671970212, -6.212179246726953, 106.81811671970212, -6.212179246726953], "geometry": {"coordinates": [106.81811671970212, -6.212179246726953], "type": "Point"}, "id": "169", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_169"}, "type": "Feature"}, {"bbox": [106.81135161383631, -6.224633559334238, 106.81135161383631, -6.224633559334238], "geometry": {"coordinates": [106.81135161383631, -6.224633559334238], "type": "Point"}, "id": "170", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_170"}, "type": "Feature"}, {"bbox": [106.83248471569478, -6.219107916017486, 106.83248471569478, -6.219107916017486], "geometry": {"coordinates": [106.83248471569478, -6.219107916017486], "type": "Point"}, "id": "171", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_171"}, "type": "Feature"}, {"bbox": [106.79780134387222, -6.220224396424322, 106.79780134387222, -6.220224396424322], "geometry": {"coordinates": [106.79780134387222, -6.220224396424322], "type": "Point"}, "id": "172", "properties": {"__folium_color": "#F5A524", "brand": "Tomoro", "id": "competitor_172"}, "type": "Feature"}, {"bbox": [106.81961167177576, -6.255293606197771, 106.81961167177576, -6.255293606197771], "geometry": {"coordinates": [106.81961167177576, -6.255293606197771], "type": "Point"}, "id": "173", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_173"}, "type": "Feature"}, {"bbox": [106.79402494730692, -6.239926842186846, 106.79402494730692, -6.239926842186846], "geometry": {"coordinates": [106.79402494730692, -6.239926842186846], "type": "Point"}, "id": "174", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_174"}, "type": "Feature"}, {"bbox": [106.84487243939037, -6.230139419462343, 106.84487243939037, -6.230139419462343], "geometry": {"coordinates": [106.84487243939037, -6.230139419462343], "type": "Point"}, "id": "175", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_175"}, "type": "Feature"}, {"bbox": [106.836128184712, -6.259198007030894, 106.836128184712, -6.259198007030894], "geometry": {"coordinates": [106.836128184712, -6.259198007030894], "type": "Point"}, "id": "176", "properties": {"__folium_color": "#F5A524", "brand": "Fore Coffee", "id": "competitor_176"}, "type": "Feature"}, {"bbox": [106.7607813088604, -6.239068271006471, 106.7607813088604, -6.239068271006471], "geometry": {"coordinates": [106.7607813088604, -6.239068271006471], "type": "Point"}, "id": "177", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_177"}, "type": "Feature"}, {"bbox": [106.76867366991125, -6.183395219986554, 106.76867366991125, -6.183395219986554], "geometry": {"coordinates": [106.76867366991125, -6.183395219986554], "type": "Point"}, "id": "178", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_178"}, "type": "Feature"}, {"bbox": [106.84943926873183, -6.191189058401454, 106.84943926873183, -6.191189058401454], "geometry": {"coordinates": [106.84943926873183, -6.191189058401454], "type": "Point"}, "id": "179", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_179"}, "type": "Feature"}, {"bbox": [106.75574000010133, -6.218490625090832, 106.75574000010133, -6.218490625090832], "geometry": {"coordinates": [106.75574000010133, -6.218490625090832], "type": "Point"}, "id": "180", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_180"}, "type": "Feature"}, {"bbox": [106.83631609545614, -6.208427656485319, 106.83631609545614, -6.208427656485319], "geometry": {"coordinates": [106.83631609545614, -6.208427656485319], "type": "Point"}, "id": "181", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_181"}, "type": "Feature"}, {"bbox": [106.84865766207567, -6.167738341610129, 106.84865766207567, -6.167738341610129], "geometry": {"coordinates": [106.84865766207567, -6.167738341610129], "type": "Point"}, "id": "182", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_182"}, "type": "Feature"}, {"bbox": [106.80973503440401, -6.171036050654527, 106.80973503440401, -6.171036050654527], "geometry": {"coordinates": [106.80973503440401, -6.171036050654527], "type": "Point"}, "id": "183", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_183"}, "type": "Feature"}, {"bbox": [106.85536097001257, -6.196514702727394, 106.85536097001257, -6.196514702727394], "geometry": {"coordinates": [106.85536097001257, -6.196514702727394], "type": "Point"}, "id": "184", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_184"}, "type": "Feature"}, {"bbox": [106.75625425063785, -6.187659547855371, 106.75625425063785, -6.187659547855371], "geometry": {"coordinates": [106.75625425063785, -6.187659547855371], "type": "Point"}, "id": "185", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_185"}, "type": "Feature"}, {"bbox": [106.81284576955909, -6.151880857800041, 106.81284576955909, -6.151880857800041], "geometry": {"coordinates": [106.81284576955909, -6.151880857800041], "type": "Point"}, "id": "186", "properties": {"__folium_color": "#F5A524", "brand": "Tomoro", "id": "competitor_186"}, "type": "Feature"}, {"bbox": [106.76423267740026, -6.256984832602484, 106.76423267740026, -6.256984832602484], "geometry": {"coordinates": [106.76423267740026, -6.256984832602484], "type": "Point"}, "id": "187", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_187"}, "type": "Feature"}, {"bbox": [106.81223243458933, -6.17171451728029, 106.81223243458933, -6.17171451728029], "geometry": {"coordinates": [106.81223243458933, -6.17171451728029], "type": "Point"}, "id": "188", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_188"}, "type": "Feature"}, {"bbox": [106.84163270747119, -6.161126634273424, 106.84163270747119, -6.161126634273424], "geometry": {"coordinates": [106.84163270747119, -6.161126634273424], "type": "Point"}, "id": "189", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_189"}, "type": "Feature"}, {"bbox": [106.74283782661686, -6.148754051018192, 106.74283782661686, -6.148754051018192], "geometry": {"coordinates": [106.74283782661686, -6.148754051018192], "type": "Point"}, "id": "190", "properties": {"__folium_color": "#F5A524", "brand": "Fore Coffee", "id": "competitor_190"}, "type": "Feature"}, {"bbox": [106.83793566315995, -6.21685812488977, 106.83793566315995, -6.21685812488977], "geometry": {"coordinates": [106.83793566315995, -6.21685812488977], "type": "Point"}, "id": "191", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_191"}, "type": "Feature"}, {"bbox": [106.80495810571182, -6.208799955554525, 106.80495810571182, -6.208799955554525], "geometry": {"coordinates": [106.80495810571182, -6.208799955554525], "type": "Point"}, "id": "192", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_192"}, "type": "Feature"}, {"bbox": [106.7960858474697, -6.185479463643879, 106.7960858474697, -6.185479463643879], "geometry": {"coordinates": [106.7960858474697, -6.185479463643879], "type": "Point"}, "id": "193", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_193"}, "type": "Feature"}, {"bbox": [106.74567144934323, -6.204482062717288, 106.74567144934323, -6.204482062717288], "geometry": {"coordinates": [106.74567144934323, -6.204482062717288], "type": "Point"}, "id": "194", "properties": {"__folium_color": "#F5A524", "brand": "Tomoro", "id": "competitor_194"}, "type": "Feature"}, {"bbox": [106.77935018997215, -6.146044290397934, 106.77935018997215, -6.146044290397934], "geometry": {"coordinates": [106.77935018997215, -6.146044290397934], "type": "Point"}, "id": "195", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_195"}, "type": "Feature"}, {"bbox": [106.83309356199253, -6.22876567180298, 106.83309356199253, -6.22876567180298], "geometry": {"coordinates": [106.83309356199253, -6.22876567180298], "type": "Point"}, "id": "196", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_196"}, "type": "Feature"}, {"bbox": [106.7535934111202, -6.257737627616323, 106.7535934111202, -6.257737627616323], "geometry": {"coordinates": [106.7535934111202, -6.257737627616323], "type": "Point"}, "id": "197", "properties": {"__folium_color": "#F5A524", "brand": "Tomoro", "id": "competitor_197"}, "type": "Feature"}, {"bbox": [106.74453530958867, -6.180356239712944, 106.74453530958867, -6.180356239712944], "geometry": {"coordinates": [106.74453530958867, -6.180356239712944], "type": "Point"}, "id": "198", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_198"}, "type": "Feature"}, {"bbox": [106.75045911637949, -6.147549044862068, 106.75045911637949, -6.147549044862068], "geometry": {"coordinates": [106.75045911637949, -6.147549044862068], "type": "Point"}, "id": "199", "properties": {"__folium_color": "#F5A524", "brand": "Fore Coffee", "id": "competitor_199"}, "type": "Feature"}, {"bbox": [106.79719105359847, -6.141502267197897, 106.79719105359847, -6.141502267197897], "geometry": {"coordinates": [106.79719105359847, -6.141502267197897], "type": "Point"}, "id": "200", "properties": {"__folium_color": "#F5A524", "brand": "Tomoro", "id": "competitor_200"}, "type": "Feature"}, {"bbox": [106.81461547568323, -6.255913880344749, 106.81461547568323, -6.255913880344749], "geometry": {"coordinates": [106.81461547568323, -6.255913880344749], "type": "Point"}, "id": "201", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_201"}, "type": "Feature"}, {"bbox": [106.74742281127281, -6.25872352707955, 106.74742281127281, -6.25872352707955], "geometry": {"coordinates": [106.74742281127281, -6.25872352707955], "type": "Point"}, "id": "202", "properties": {"__folium_color": "#F5A524", "brand": "Tomoro", "id": "competitor_202"}, "type": "Feature"}, {"bbox": [106.83058958825241, -6.214788124385402, 106.83058958825241, -6.214788124385402], "geometry": {"coordinates": [106.83058958825241, -6.214788124385402], "type": "Point"}, "id": "203", "properties": {"__folium_color": "#F5A524", "brand": "Tomoro", "id": "competitor_203"}, "type": "Feature"}, {"bbox": [106.83129290739363, -6.195420538260674, 106.83129290739363, -6.195420538260674], "geometry": {"coordinates": [106.83129290739363, -6.195420538260674], "type": "Point"}, "id": "204", "properties": {"__folium_color": "#F5A524", "brand": "Kopi Kenangan", "id": "competitor_204"}, "type": "Feature"}, {"bbox": [106.75557882776053, -6.215305114799189, 106.75557882776053, -6.215305114799189], "geometry": {"coordinates": [106.75557882776053, -6.215305114799189], "type": "Point"}, "id": "205", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_205"}, "type": "Feature"}, {"bbox": [106.84454789867112, -6.255895715016807, 106.84454789867112, -6.255895715016807], "geometry": {"coordinates": [106.84454789867112, -6.255895715016807], "type": "Point"}, "id": "206", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_206"}, "type": "Feature"}, {"bbox": [106.8019289069996, -6.17928765496655, 106.8019289069996, -6.17928765496655], "geometry": {"coordinates": [106.8019289069996, -6.17928765496655], "type": "Point"}, "id": "207", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_207"}, "type": "Feature"}, {"bbox": [106.74228048519457, -6.210358866893436, 106.74228048519457, -6.210358866893436], "geometry": {"coordinates": [106.74228048519457, -6.210358866893436], "type": "Point"}, "id": "208", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_208"}, "type": "Feature"}, {"bbox": [106.78848451328514, -6.179727838524166, 106.78848451328514, -6.179727838524166], "geometry": {"coordinates": [106.78848451328514, -6.179727838524166], "type": "Point"}, "id": "209", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_209"}, "type": "Feature"}, {"bbox": [106.81934298747515, -6.254551545285191, 106.81934298747515, -6.254551545285191], "geometry": {"coordinates": [106.81934298747515, -6.254551545285191], "type": "Point"}, "id": "210", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_210"}, "type": "Feature"}, {"bbox": [106.80276198213528, -6.181881606779063, 106.80276198213528, -6.181881606779063], "geometry": {"coordinates": [106.80276198213528, -6.181881606779063], "type": "Point"}, "id": "211", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_211"}, "type": "Feature"}, {"bbox": [106.81928849797573, -6.1768330642958, 106.81928849797573, -6.1768330642958], "geometry": {"coordinates": [106.81928849797573, -6.1768330642958], "type": "Point"}, "id": "212", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_212"}, "type": "Feature"}, {"bbox": [106.74606890591484, -6.155636540107352, 106.74606890591484, -6.155636540107352], "geometry": {"coordinates": [106.74606890591484, -6.155636540107352], "type": "Point"}, "id": "213", "properties": {"__folium_color": "#F5A524", "brand": "Fore Coffee", "id": "competitor_213"}, "type": "Feature"}, {"bbox": [106.84280312843892, -6.154247433586798, 106.84280312843892, -6.154247433586798], "geometry": {"coordinates": [106.84280312843892, -6.154247433586798], "type": "Point"}, "id": "214", "properties": {"__folium_color": "#F5A524", "brand": "Fore Coffee", "id": "competitor_214"}, "type": "Feature"}, {"bbox": [106.82791057242385, -6.239137865677786, 106.82791057242385, -6.239137865677786], "geometry": {"coordinates": [106.82791057242385, -6.239137865677786], "type": "Point"}, "id": "215", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_215"}, "type": "Feature"}, {"bbox": [106.83055603560014, -6.220422477098674, 106.83055603560014, -6.220422477098674], "geometry": {"coordinates": [106.83055603560014, -6.220422477098674], "type": "Point"}, "id": "216", "properties": {"__folium_color": "#F5A524", "brand": "Starbucks", "id": "competitor_216"}, "type": "Feature"}, {"bbox": [106.84240121720048, -6.153579770000851, 106.84240121720048, -6.153579770000851], "geometry": {"coordinates": [106.84240121720048, -6.153579770000851], "type": "Point"}, "id": "217", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_217"}, "type": "Feature"}, {"bbox": [106.78591739970935, -6.186056891747227, 106.78591739970935, -6.186056891747227], "geometry": {"coordinates": [106.78591739970935, -6.186056891747227], "type": "Point"}, "id": "218", "properties": {"__folium_color": "#F5A524", "brand": "Independen", "id": "competitor_218"}, "type": "Feature"}, {"bbox": [106.79760617272532, -6.247137258352598, 106.79760617272532, -6.247137258352598], "geometry": {"coordinates": [106.79760617272532, -6.247137258352598], "type": "Point"}, "id": "219", "properties": {"__folium_color": "#F5A524", "brand": "Janji Jiwa", "id": "competitor_219"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_ae33d92bed2a86cf55dcfab8be3c0840.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["brand"];
+    let aliases = ["brand"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_ae33d92bed2a86cf55dcfab8be3c0840.addTo(map_0d0880c7c38b4f22c5e7c2453c29c579);
+        
+    
+            var marker_957168de9790cb7f430c9ffcb1bb9f85 = L.marker(
+                [-6.236011015702987, 106.78449576290791],
+                {
+}
+            ).addTo(map_0d0880c7c38b4f22c5e7c2453c29c579);
+        
+    
+            var icon_2da238fb4fa60237f1fbe8bbdbfa83cd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_957168de9790cb7f430c9ffcb1bb9f85.bindTooltip(
+                `<div>
+                     #1 Ruko Jl. Kandidat No. 11 — skor 0.775
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_957168de9790cb7f430c9ffcb1bb9f85.setIcon(icon_2da238fb4fa60237f1fbe8bbdbfa83cd);
+            
+    
+            var marker_936d017c22c110dd1e27934c2f97d30a = L.marker(
+                [-6.203468455262824, 106.78254311617557],
+                {
+}
+            ).addTo(map_0d0880c7c38b4f22c5e7c2453c29c579);
+        
+    
+            var icon_0a58f90f2676d66467634a14365eea96 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_936d017c22c110dd1e27934c2f97d30a.bindTooltip(
+                `<div>
+                     #2 Ruko Jl. Kandidat No. 22 — skor 0.703
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_936d017c22c110dd1e27934c2f97d30a.setIcon(icon_0a58f90f2676d66467634a14365eea96);
+            
+    
+            var marker_936c2081679f61b874422d46882ff0d8 = L.marker(
+                [-6.17596818775973, 106.84303175038936],
+                {
+}
+            ).addTo(map_0d0880c7c38b4f22c5e7c2453c29c579);
+        
+    
+            var icon_27eec6b90213f7e1cf1d8647cf45330e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_936c2081679f61b874422d46882ff0d8.bindTooltip(
+                `<div>
+                     #3 Ruko Jl. Kandidat No. 3 — skor 0.693
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_936c2081679f61b874422d46882ff0d8.setIcon(icon_27eec6b90213f7e1cf1d8647cf45330e);
+            
+    
+            var marker_b0e67588566f0732a423539ce4681f8f = L.marker(
+                [-6.19289514071055, 106.79600652044724],
+                {
+}
+            ).addTo(map_0d0880c7c38b4f22c5e7c2453c29c579);
+        
+    
+            var icon_c709d0a53fa7283e276fbbefc8b7d866 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_b0e67588566f0732a423539ce4681f8f.bindTooltip(
+                `<div>
+                     #4 Ruko Jl. Kandidat No. 27 — skor 0.681
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b0e67588566f0732a423539ce4681f8f.setIcon(icon_c709d0a53fa7283e276fbbefc8b7d866);
+            
+    
+            var marker_376d65dd9992a7bb484d8c0cd24867a7 = L.marker(
+                [-6.163428277100383, 106.85707468219641],
+                {
+}
+            ).addTo(map_0d0880c7c38b4f22c5e7c2453c29c579);
+        
+    
+            var icon_5d4dc9f62fe207243837a3a079ec87e2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_376d65dd9992a7bb484d8c0cd24867a7.bindTooltip(
+                `<div>
+                     #5 Ruko Jl. Kandidat No. 6 — skor 0.679
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_376d65dd9992a7bb484d8c0cd24867a7.setIcon(icon_5d4dc9f62fe207243837a3a079ec87e2);
+            
+    
+            var layer_control_8f6265609ed018a0ee0adae37ca5ca4b_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_2866ac900b452256c8ec0e244a694265,
+                },
+                overlays :  {
+                    "Kandidat lokasi (skor)" : geo_json_0f3db7454b051bcc760816d22f2098c8,
+                    "Kompetitor" : geo_json_ae33d92bed2a86cf55dcfab8be3c0840,
+                },
+            };
+            let layer_control_8f6265609ed018a0ee0adae37ca5ca4b = L.control.layers(
+                layer_control_8f6265609ed018a0ee0adae37ca5ca4b_layers.base_layers,
+                layer_control_8f6265609ed018a0ee0adae37ca5ca4b_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_0d0880c7c38b4f22c5e7c2453c29c579);
+
+        
+</script>
+</html>
